@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Archery Scorer
+
+  Created by Steve on 16/3/2022.
+  
+*/
+
+// AppCalendar
+"Today" = "Today";
+"Setting" = "Setting";
+"Sun" = "Sun";
+"Mon" = "Mon";
+"Tue" = "Tue";
+"Wed" = "Wed";
+"Thu" = "Thu";
+"Fri" = "Fri";
+"Sat" = "Sat";
+
+// AddView
+"Start Time: " = "Start Time: ";
+"Lenght: " = "Lenght: ";
+"inch" = "inch";
+"Weight" = "Weight";
+"lbs" = "lbs";
+"Distance: " = "Distance: ";
+"m" = "m";
+"Start" = "Start";
+"Back" = "Back";
+"Please input all the data!" = "Please input all the data!";
+
+// RecordView
+"Cancel" = "Cancel";
+"Done" = "Done";
+"Show all info" = "Show all info";
+"Time: " = "Time: ";
+"Total: " = "Total: ";
+"Ave: " = "Ave: ";
+"End" = "End";
+"Leave?" = "Leave";
+"Leave" = "Leave";
+"Data will be lost" = "Data will be lost";
+
+// StatisticsView
+"All" = "All";
+"Day" = "Day";
+"Week" = "Week";
+"Month" = "Month";
+"Year" = "Year";
+"Average Score" = "Average Score";
+"Not Enought Data" = "Not Enought Data";

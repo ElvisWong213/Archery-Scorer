@@ -7,22 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2C24A1281E74510071AB2A /* ChartCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C24A0281E74510071AB2A /* ChartCombine.swift */; };
+		AA2C24A3281E9D520071AB2A /* FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C24A2281E9D520071AB2A /* FilterBar.swift */; };
+		AA5BC22E27E329D700C268F3 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BC22D27E329D700C268F3 /* RecordView.swift */; };
+		AA5BC23027E3A6B400C268F3 /* TargetBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */; };
+		AA65E78627EB290D00347BB6 /* MyClassAndObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */; };
+		AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA687B0A27F463AA00865805 /* StatisticsView.swift */; };
+		AA9855D327E8D1E500EC4A22 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D227E8D1E500EC4A22 /* Persistence.swift */; };
+		AA9855D827E8EB0300EC4A22 /* Round+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */; };
+		AA9855D927E8EB0300EC4A22 /* Round+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D527E8EB0300EC4A22 /* Round+CoreDataProperties.swift */; };
+		AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */; };
+		AA9855DB27E8EB0300EC4A22 /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */; };
+		AA9855DD27E8F12E00EC4A22 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855DC27E8F12E00EC4A22 /* DataController.swift */; };
+		AAE0A13A27E202700084B04B /* ListOfRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0A13927E202700084B04B /* ListOfRecord.swift */; };
+		AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAE0A14027E228CA0084B04B /* Localizable.strings */; };
+		AAE0A14327E232AE0084B04B /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0A14227E232AE0084B04B /* AddView.swift */; };
 		AAE2693D27E1C00500483891 /* Archery_ScorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2693C27E1C00500483891 /* Archery_ScorerApp.swift */; };
-		AAE2693F27E1C00500483891 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2693E27E1C00500483891 /* ContentView.swift */; };
 		AAE2694127E1C00600483891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE2694027E1C00600483891 /* Assets.xcassets */; };
 		AAE2694427E1C00600483891 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE2694327E1C00600483891 /* Preview Assets.xcassets */; };
-		AAE2694627E1C00600483891 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2694527E1C00600483891 /* Persistence.swift */; };
 		AAE2694927E1C00600483891 /* Archery_Scorer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAE2694727E1C00600483891 /* Archery_Scorer.xcdatamodeld */; };
+		AAE2695127E1C1E800483891 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2695027E1C1E800483891 /* HomeView.swift */; };
+		AAE2695427E1C34600483891 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2695327E1C34600483891 /* BottomBar.swift */; };
+		AAE2695627E1C97000483891 /* AppCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE2695527E1C97000483891 /* AppCalendar.swift */; };
+		AAEACE6027E5D0C800B9A0B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEACE5F27E5D0C800B9A0B3 /* ContentView.swift */; };
+		AAEACE6227E71A8F00B9A0B3 /* ScoreBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEACE6127E71A8F00B9A0B3 /* ScoreBoard.swift */; };
+		AAEACE6427E71CE500B9A0B3 /* ScoreBoard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEACE6327E71CE500B9A0B3 /* ScoreBoard2.swift */; };
+		AAEACE6627E77E7200B9A0B3 /* ReviewRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */; };
+		AAEEC8BE27EC8E070062DDBB /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEEC8BD27EC8E070062DDBB /* BarChart.swift */; };
+		AAEEC8C027EDCA410062DDBB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEEC8BF27EDCA410062DDBB /* LineChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA2C24A0281E74510071AB2A /* ChartCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCombine.swift; sourceTree = "<group>"; };
+		AA2C24A2281E9D520071AB2A /* FilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBar.swift; sourceTree = "<group>"; };
+		AA5BC22D27E329D700C268F3 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBoard.swift; sourceTree = "<group>"; };
+		AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassAndObject.swift; sourceTree = "<group>"; };
+		AA687B0A27F463AA00865805 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		AA9855D227E8D1E500EC4A22 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AA9855D527E8EB0300EC4A22 /* Round+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AA9855DC27E8F12E00EC4A22 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		AAE0A13927E202700084B04B /* ListOfRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRecord.swift; sourceTree = "<group>"; };
+		AAE0A13B27E223F00084B04B /* Archery-Scorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Archery-Scorer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AAE0A13F27E228CA0084B04B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AAE0A14127E228F30084B04B /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AAE0A14227E232AE0084B04B /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		AAE2693927E1C00500483891 /* Archery Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Archery Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE2693C27E1C00500483891 /* Archery_ScorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archery_ScorerApp.swift; sourceTree = "<group>"; };
-		AAE2693E27E1C00500483891 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAE2694027E1C00600483891 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAE2694327E1C00600483891 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAE2694527E1C00600483891 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AAE2694827E1C00600483891 /* Archery_Scorer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Archery_Scorer.xcdatamodel; sourceTree = "<group>"; };
+		AAE2695027E1C1E800483891 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AAE2695327E1C34600483891 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		AAE2695527E1C97000483891 /* AppCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCalendar.swift; sourceTree = "<group>"; };
+		AAEACE5F27E5D0C800B9A0B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAEACE6127E71A8F00B9A0B3 /* ScoreBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoard.swift; sourceTree = "<group>"; };
+		AAEACE6327E71CE500B9A0B3 /* ScoreBoard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoard2.swift; sourceTree = "<group>"; };
+		AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRecordView.swift; sourceTree = "<group>"; };
+		AAEEC8BD27EC8E070062DDBB /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		AAEEC8BF27EDCA410062DDBB /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,9 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA9855B927E8B1E400EC4A22 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2694727E1C00600483891 /* Archery_Scorer.xcdatamodeld */,
+				AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */,
+				AA9855D527E8EB0300EC4A22 /* Round+CoreDataProperties.swift */,
+				AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */,
+				AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */,
+				AA9855DC27E8F12E00EC4A22 /* DataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		AAE2693027E1C00500483891 = {
 			isa = PBXGroup;
 			children = (
+				AA9855B927E8B1E400EC4A22 /* CoreData */,
+				AAE0A14027E228CA0084B04B /* Localizable.strings */,
 				AAE2693B27E1C00500483891 /* Archery Scorer */,
 				AAE2693A27E1C00500483891 /* Products */,
 			);
@@ -55,12 +116,14 @@
 		AAE2693B27E1C00500483891 /* Archery Scorer */ = {
 			isa = PBXGroup;
 			children = (
+				AAE0A13B27E223F00084B04B /* Archery-Scorer-Info.plist */,
+				AAE2694F27E1C18B00483891 /* Pages */,
 				AAE2693C27E1C00500483891 /* Archery_ScorerApp.swift */,
-				AAE2693E27E1C00500483891 /* ContentView.swift */,
+				AAEACE5F27E5D0C800B9A0B3 /* ContentView.swift */,
+				AA9855D227E8D1E500EC4A22 /* Persistence.swift */,
 				AAE2694027E1C00600483891 /* Assets.xcassets */,
-				AAE2694527E1C00600483891 /* Persistence.swift */,
-				AAE2694727E1C00600483891 /* Archery_Scorer.xcdatamodeld */,
 				AAE2694227E1C00600483891 /* Preview Content */,
+				AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */,
 			);
 			path = "Archery Scorer";
 			sourceTree = "<group>";
@@ -71,6 +134,36 @@
 				AAE2694327E1C00600483891 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAE2694F27E1C18B00483891 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2695027E1C1E800483891 /* HomeView.swift */,
+				AA687B0A27F463AA00865805 /* StatisticsView.swift */,
+				AAE2695227E1C32300483891 /* Elements */,
+				AAE0A14227E232AE0084B04B /* AddView.swift */,
+				AA5BC22D27E329D700C268F3 /* RecordView.swift */,
+				AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		AAE2695227E1C32300483891 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2695327E1C34600483891 /* BottomBar.swift */,
+				AAE2695527E1C97000483891 /* AppCalendar.swift */,
+				AAE0A13927E202700084B04B /* ListOfRecord.swift */,
+				AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */,
+				AAEACE6127E71A8F00B9A0B3 /* ScoreBoard.swift */,
+				AAEACE6327E71CE500B9A0B3 /* ScoreBoard2.swift */,
+				AAEEC8BD27EC8E070062DDBB /* BarChart.swift */,
+				AAEEC8BF27EDCA410062DDBB /* LineChart.swift */,
+				AA2C24A0281E74510071AB2A /* ChartCombine.swift */,
+				AA2C24A2281E9D520071AB2A /* FilterBar.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +208,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-HK",
 			);
 			mainGroup = AAE2693027E1C00500483891;
 			productRefGroup = AAE2693A27E1C00500483891 /* Products */;
@@ -132,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE2694427E1C00600483891 /* Preview Assets.xcassets in Resources */,
+				AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */,
 				AAE2694127E1C00600483891 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,20 +238,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE2694627E1C00600483891 /* Persistence.swift in Sources */,
-				AAE2693F27E1C00500483891 /* ContentView.swift in Sources */,
+				AA5BC23027E3A6B400C268F3 /* TargetBoard.swift in Sources */,
+				AAE0A14327E232AE0084B04B /* AddView.swift in Sources */,
+				AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */,
+				AAEACE6427E71CE500B9A0B3 /* ScoreBoard2.swift in Sources */,
+				AA2C24A1281E74510071AB2A /* ChartCombine.swift in Sources */,
+				AA9855D827E8EB0300EC4A22 /* Round+CoreDataClass.swift in Sources */,
+				AA2C24A3281E9D520071AB2A /* FilterBar.swift in Sources */,
+				AAEEC8C027EDCA410062DDBB /* LineChart.swift in Sources */,
+				AA5BC22E27E329D700C268F3 /* RecordView.swift in Sources */,
+				AAE2695427E1C34600483891 /* BottomBar.swift in Sources */,
+				AA65E78627EB290D00347BB6 /* MyClassAndObject.swift in Sources */,
 				AAE2694927E1C00600483891 /* Archery_Scorer.xcdatamodeld in Sources */,
+				AAEACE6227E71A8F00B9A0B3 /* ScoreBoard.swift in Sources */,
+				AAE2695127E1C1E800483891 /* HomeView.swift in Sources */,
+				AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */,
+				AA9855DD27E8F12E00EC4A22 /* DataController.swift in Sources */,
+				AA9855D327E8D1E500EC4A22 /* Persistence.swift in Sources */,
+				AAE0A13A27E202700084B04B /* ListOfRecord.swift in Sources */,
+				AAEACE6027E5D0C800B9A0B3 /* ContentView.swift in Sources */,
+				AA9855D927E8EB0300EC4A22 /* Round+CoreDataProperties.swift in Sources */,
+				AAEACE6627E77E7200B9A0B3 /* ReviewRecordView.swift in Sources */,
 				AAE2693D27E1C00500483891 /* Archery_ScorerApp.swift in Sources */,
+				AAE2695627E1C97000483891 /* AppCalendar.swift in Sources */,
+				AAEEC8BE27EC8E070062DDBB /* BarChart.swift in Sources */,
+				AA9855DB27E8EB0300EC4A22 /* Game+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAE0A14027E228CA0084B04B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAE0A13F27E228CA0084B04B /* en */,
+				AAE0A14127E228F30084B04B /* zh-HK */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AAE2694A27E1C00600483891 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -203,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -217,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -257,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -272,17 +402,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Archery-Scorer-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Archery Marker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,9 +425,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,17 +437,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Archery-Scorer-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Archery Marker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,9 +460,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

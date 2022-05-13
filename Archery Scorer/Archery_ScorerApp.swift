@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct Archery_ScorerApp: App {
-    let persistenceController = PersistenceController.shared
+//    let persistenceController = PersistenceController.shared
+    @State private var dataController = DataController()
 
     var body: some Scene {
         WindowGroup {
+//            RecordView(bowData: .constant([58, 150 ,10]), time: .constant(Date.now))
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

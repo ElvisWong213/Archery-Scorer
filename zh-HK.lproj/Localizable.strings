@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  Archery Scorer
+
+  Created by Steve on 16/3/2022.
+  
+*/
+
+// AppCalendar
+"Today" = "今日";
+"Setting" = "設定";
+"Sun" = "日";
+"Mon" = "一";
+"Tue" = "二";
+"Wed" = "三";
+"Thu" = "四";
+"Fri" = "五";
+"Sat" = "六";
+
+// AddView
+"Start Time: " = "開始時間: ";
+"Length: " = "長度: ";
+"inch" = "英寸";
+"Weight: " = "磅數: ";
+"lbs" = "磅";
+"Distance: " = "距離: ";
+"m" = "米";
+"Start" = "開始";
+"Back" = "返回";
+"Please input all the data!" = "請輸入所有資料!";
+"Scoring Method: " = "計分方式: ";
+"Zone" = "區域";
+
+// RecordView
+"Cancel" = "取消";
+"Done" = "完成";
+"Show all info" = "顯示所有資訊";
+"Time: " = "時間: ";
+"Total: " = "總分: ";
+"Ave: " = "平均: ";
+"End" = "回合";
+"Leave?" = "離開?";
+"Leave" = "離開";
+"Data will be lost" = "資料會被刪除";
+"Delete" = "刪除";
+
+// ListView
+"Average: " = " 平均分: ";
+
+// ReviewRecordView
+"Score Distribution" = "分數分佈";
+"Average Score in Each Round" = "每回合的平均分數";
+"Edit" = "編輯";
+
+// StatisticsView
+"All" = "全部";
+"Day" = "日";
+"Week" = "週";
+"Month" = "月";
+"Year" = "年";
+"Average Score" = "平均分";
+"Not Enought Data" = "數據不足";
+

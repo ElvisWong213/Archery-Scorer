@@ -1,31 +1,33 @@
 //
-//  Persistence.swift
+//  DataController.swift
 //  Archery Scorer
 //
-//  Created by Steve on 16/3/2022.
+//  Created by Steve on 22/3/2022.
 //
 
+import Foundation
 import CoreData
 
-struct PersistenceController {
-    static let shared = PersistenceController()
-
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
+class DataController: ObservableObject {
+    let container = NSPersistentContainer(name: "Archery_Scorer")
+    
+    static var preview: DataController = {
+        let result = DataController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Round(context: viewContext)
-            newItem.score = "M"
-            newItem.x = 0.0
-            newItem.y = 0.0
-            newItem.index = 1
-            newItem.game = Game(context: viewContext)
-            newItem.game?.distance = "10"
-            newItem.game?.average = 10.0
-            newItem.game?.uuid = UUID()
-            newItem.game?.time = Date()
-            newItem.game?.total = 10
-        }
+//        for _ in 0..<5 {
+        let newItem = Round(context: viewContext)
+        newItem.score = "M"
+        newItem.x = 0.0
+        newItem.y = 0.0
+        newItem.index = 1
+        newItem.game = Game(context: viewContext)
+        newItem.game?.scoringMethod = "6"
+        newItem.game?.distance = "10"
+        newItem.game?.average = 10.0
+        newItem.game?.uuid = UUID(uuidString: "1")
+        newItem.game?.time = Date()
+        newItem.game?.total = 10
+//        }
         do {
             try viewContext.save()
         } catch {
@@ -36,11 +38,16 @@ struct PersistenceController {
         }
         return result
     }()
-
-    let container: NSPersistentContainer
-
+    
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Archery_Scorer")
+//        container.loadPersistentStores { description, error in
+//            if let error = error {
+//                print("Core Data failed to load: \(error.localizedDescription)")
+//                return
+//            }
+//            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+//        }
+        
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -60,6 +67,7 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }
