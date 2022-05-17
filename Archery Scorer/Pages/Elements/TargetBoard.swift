@@ -94,17 +94,17 @@ struct TargetBoard: View {
                     .resizable()
                     .frame(width: 330, height: 330)
             }
-            ForEach(0..<6, id: \.self) { i in
-                ForEach(0..<6, id: \.self) { j in
-                    let pointLocation = scoreData[i][j].location
+            ForEach(0..<scoreData.count, id: \.self) { i in
+                ForEach(0..<scoreData[i].count, id: \.self) { j in
+                    let pointLocation = scoreData[i][j].location ?? CGPoint(x: -1, y: -1)
                     let selected = CheckBox(selectedBox: selectedBox, i: i, j: j, selectedRowButton: selectedRowButton)
-                    if pointLocation!.x >= 0 && pointLocation!.y >= 0 {
+                    if pointLocation.x >= 0 && pointLocation.y >= 0 {
                         if addData {
                             if selectedBox[0] == i {
                                 Image(systemName: "circle.fill")
                                     .resizable()
                                     .frame(width: 8, height: 8)
-                                    .position(scoreData[i][j].location!)
+                                    .position(pointLocation)
                                     .foregroundColor(selected ? buttonColor : Color.black)
 //                                    .animation(nil)
                             }
@@ -112,7 +112,7 @@ struct TargetBoard: View {
                             Image(systemName: "circle.fill")
                                 .resizable()
                                 .frame(width: 8, height: 8)
-                                .position(scoreData[i][j].location!)
+                                .position(pointLocation)
                                 .foregroundColor(Color.black.opacity(0.75))
 //                                .animation(nil)
                         }

@@ -38,12 +38,12 @@ struct ChartCombine: View {
     var body: some View {
         if fetchRequest.count > 0 {
             ScrollView {
-//                TargetBoard(scoreData: .constant(getData()), selectedBox: .constant([0, 0]), addData: .constant(false), selectedRowButton: .constant(false), scoringMethod: .constant(scoringMethod))
-//                    .foregroundColor(Color.black)
-//                    .disabled(true)
-//                    .frame(width: 350, height: 350)
-//                    .cornerRadius(cornerRad)
-//                    .padding()
+                TargetBoard(scoreData: .constant(getData(range: selectedRange)), selectedBox: .constant([0, 0]), addData: .constant(false), selectedRowButton: .constant(false), scoringMethod: .constant(scoringMethod))
+                    .foregroundColor(Color.black)
+                    .disabled(true)
+                    .frame(width: 350, height: 350)
+                    .cornerRadius(cornerRad)
+                    .padding()
                 VStack {
                     Text("Score Distribution")
                         .font(.title2)
@@ -138,6 +138,9 @@ struct ChartCombine: View {
                     dummyDate = Calendar.current.dateComponents([.year, .month, .day], from: i.wrappedTime)
                 }
             }
+        }
+        if output.count == 0 {
+            output.append([])
         }
         return output
     }
