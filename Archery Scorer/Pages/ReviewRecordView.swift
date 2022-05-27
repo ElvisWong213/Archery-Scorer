@@ -15,6 +15,7 @@ struct ReviewRecordView: View {
     let buttonColor = Color("ButtonColor")
     let textColor = Color("TextColor")
     let cornerRad: CGFloat = 15
+    let buttonSize: CGFloat = UIScreen.main.bounds.size.height * 0.04
         
     @EnvironmentObject var startData: StartData
     @EnvironmentObject var appState: BaseViewModel
@@ -31,6 +32,41 @@ struct ReviewRecordView: View {
     let topItem = [NSLocalizedString("End", comment: ""), "1", "2", "3", "3S", "6S"]
     
     @State var textCollapse = true
+    
+    var screenshotView: some View {
+        VStack {
+            HStack(alignment: .center) {
+                Text("Distance: ")
+                Text(String(startData.distance))
+                Text("m")
+            }
+            .padding(.bottom, 0.1)
+            HStack(alignment: .center) {
+                Text("Time: ")
+                Text(startData.time, format: .dateTime.year().month().day().hour().minute())
+
+            }
+            TargetBoard(scoreData: $coreDataGameID.scoreData, selectedBox: $selectedBox, addData: .constant(false), selectedRowButton: $selectedRowButton, scoringMethod: $startData.scoringMethod)
+                .foregroundColor(Color.black)
+                .disabled(true)
+                .frame(width: 350, height: 350)
+                .cornerRadius(cornerRad)
+                .padding(.vertical)
+            HStack {
+                Spacer()
+                Text("Total: ")
+                Text(String(ScoreDataFunction().TotalScore(scoreData: coreDataGameID.scoreData)))
+                Spacer()
+                Text("Average: ")
+                Text("\(ScoreDataFunction().AverageScore(scoreData: coreDataGameID.scoreData, countNilValue: false), specifier: "%.2f")")
+                Spacer()
+            }
+        }
+        .font(.title2)
+        .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.width * 16 / 9, alignment: .center)
+        .background(backgroundColor)
+        .foregroundColor(textColor)
+    }
         
     var body: some View {
         ZStack {
@@ -135,7 +171,26 @@ struct ReviewRecordView: View {
                     .background(backgroundColor2)
                     .cornerRadius(cornerRad)
                     .padding()
+                    .padding(.bottom, 20)
                 }
+                ZStack {
+                    backgroundColor
+                        .ignoresSafeArea()
+                    HStack {
+                        Button {
+                            let image = screenshotView.snapshot()
+                            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+
+                            UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+                        }label: {
+                            Image(systemName: "square.and.arrow.up")
+                                .foregroundColor(buttonColor)
+                                .font(.system(size: buttonSize))
+                                .padding(.horizontal)
+                        }
+                    }
+                }
+                .frame(height: UIScreen.main.bounds.height * 0.08)
             }
             .foregroundColor(textColor)
         }

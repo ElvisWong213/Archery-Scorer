@@ -64,5 +64,6 @@ struct BottomBar: View {
 struct BottomBar_Previews: PreviewProvider {
     static var previews: some View {
         BottomBar()
+            .environmentObject(BaseViewModel())
     }
 }
