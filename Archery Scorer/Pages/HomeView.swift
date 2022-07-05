@@ -15,8 +15,9 @@ struct HomeView: View {
     var body: some View {
         VStack {
             AppCalendar(startDate: myDate.FindStartDate(), endDate: myDate.FindEndDate())
-                .frame(height: UIScreen.main.bounds.size.height * 0.37)
+//                .frame(height: UIScreen.main.bounds.size.height * 0.35)
             ListOfRecord(startDate: myDate.FindStartDate(), endDate: myDate.FindEndDate())
+                .frame(height: UIScreen.main.bounds.size.height * 0.45)
             BottomBar()
                 .frame(height: UIScreen.main.bounds.size.height * 0.1)
         }

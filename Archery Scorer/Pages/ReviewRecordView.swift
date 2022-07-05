@@ -179,9 +179,14 @@ struct ReviewRecordView: View {
                     HStack {
                         Button {
                             let image = screenshotView.snapshot()
-                            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-
-                            UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+                            let shareActivity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+                                  if let vc = UIApplication.shared.windows.first?.rootViewController{
+                                      shareActivity.popoverPresentationController?.sourceView = vc.view
+                                     //Setup share activity position on screen on bottom center
+                                      shareActivity.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height * 0.9, width: 0, height: 0)
+                                      shareActivity.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
+                                     vc.present(shareActivity, animated: true, completion: nil)
+                                  }
                         }label: {
                             Image(systemName: "square.and.arrow.up")
                                 .foregroundColor(buttonColor)

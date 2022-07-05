@@ -24,6 +24,9 @@ struct RecordView: View {
     let topItem = [NSLocalizedString("End", comment: ""), "1", "2", "3", "3S", "6S"]
     let scoreDataFunction = ScoreDataFunction()
     
+    @State var disableRowButton = false
+    @State var selectedRowButton = false
+    
     
     @State var scoreData: [[ScoreData]] = Array(repeating: Array(repeating: ScoreData(score: "", location: CGPoint.init(x: -1, y: -1)), count: 6), count: 6)
     @State var selectedBox = [0, 0]
@@ -143,7 +146,11 @@ struct RecordView: View {
                     }
                     .transition(.opacity)
                 }
-                ScoreBoard2(scoreData: $scoreData, selectedBox: $selectedBox)
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    ScoreBoard2(scoreData: $scoreData, selectedBox: $selectedBox)
+                } else if UIDevice.current.userInterfaceIdiom == .pad {
+                    ScoreBoard(scoreData: $scoreData, selectedBox: $selectedBox, disableRowButton: $disableRowButton, selectedRowButton: $selectedRowButton)
+                }
                 HStack {
                     Spacer()
                     Button {

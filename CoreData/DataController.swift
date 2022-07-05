@@ -24,7 +24,7 @@ class DataController: ObservableObject {
         newItem.game?.scoringMethod = "6"
         newItem.game?.distance = "10"
         newItem.game?.average = 10.0
-        newItem.game?.uuid = UUID(uuidString: "1")
+        newItem.game?.uuid = UUID()
         newItem.game?.time = Date()
         newItem.game?.total = 10
 //        }
@@ -40,14 +40,10 @@ class DataController: ObservableObject {
     }()
     
     init(inMemory: Bool = false) {
-//        container.loadPersistentStores { description, error in
-//            if let error = error {
-//                print("Core Data failed to load: \(error.localizedDescription)")
-//                return
-//            }
-//            self.container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-//        }
-        
+        let description = NSPersistentStoreDescription()
+        description.shouldMigrateStoreAutomatically = true
+        description.shouldInferMappingModelAutomatically = true
+        container.persistentStoreDescriptions =  [description]
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

@@ -32,6 +32,7 @@ struct BottomBar: View {
                             .foregroundColor(appState.baseView == .home ? textColor : buttonColor)
                             .font(.system(size: buttonSize))
                     }
+                    .accessibilityIdentifier("homeButton")
                     Spacer()
                     Button {
                         appState.baseView = .add
@@ -45,6 +46,7 @@ struct BottomBar: View {
                                 .font(.system(size: buttonSize))
                         }
                     }
+                    .accessibilityIdentifier("addButton")
                     Spacer()
                     Button {
                         appState.baseView = .statistic
@@ -53,6 +55,7 @@ struct BottomBar: View {
                             .foregroundColor(appState.baseView == .statistic ? textColor : buttonColor)
                             .font(.system(size: buttonSize))
                     }
+                    .accessibilityIdentifier("statisticButton")
                     Spacer()
                 }
                 .padding()

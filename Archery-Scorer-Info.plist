@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>UIBackgroundModes</key>
-	<array/>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDarkContent</string>
 </dict>

@@ -64,7 +64,7 @@ struct ScoreBoard2: View {
                             Text(String(i + 1))
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                                 .background(backgroundColor2)
-                            ScoreBoardSecondView(scoreData: $scoreData, selectedBox: $selectedBox ,i: .constant(i), selectedRowButton: .constant(false))
+                            ScoreBoardSecondView(scoreData: $scoreData, selectedBox: $selectedBox ,i: .constant(i), selectedRowButton: .constant(false), buttonSize: .constant(50.0))
                             ExtractedView(scoreData: $scoreData, i: .constant(i))
                             let sixArrowScore = scoreDataFunction.SixArrowTotal(scoreDate: scoreData, i: i)
                             Text(String(sixArrowScore))

@@ -49,6 +49,7 @@ struct AddView: View {
                         .fixedSize()
                         .keyboardType(.numberPad)
                         .font(.title2)
+                        .accessibilityIdentifier("distance")
                     Text("m")
                 }
                 .padding()

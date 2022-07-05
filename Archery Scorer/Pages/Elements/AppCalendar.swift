@@ -36,70 +36,72 @@ struct AppCalendar: View {
         ZStack {
             backgroundColor
                 .ignoresSafeArea()
-            VStack {
-                ZStack {
-                    HStack {
-                        Button {
-                            myDate.year = components.year ?? 2022
-                            myDate.month = components.month ?? 2
-                            myDate.day = components.day ?? 26
-                            dayArray = calendarFunction.DayInArray(year: myDate.year, month: myDate.month)
-                        } label: {
-                            Text("Today")
-                                .foregroundColor(buttonColor)
-                        }
-                        Spacer()
-                    }
-                    Text("\(String(myDate.day))/\(String(myDate.month))/\(String(myDate.year))")
-                        .font(.title)
-                }
-                .padding(.horizontal)
-                HStack {
-                    ForEach(weekDays, id: \.self) { days in
-                        Spacer()
-                        Text(days)
-                            .frame(width: 40, height: 30)
-                        Spacer()
-                    }
-                }
-                ForEach(0..<dayArray.count, id: \.self) { weeks in
-                    HStack {
-                        ForEach(dayArray[weeks], id: \.self) { days in
-                            Spacer()
+            GeometryReader { gr in
+                let buttonSize = gr.size.width / 14
+                VStack {
+                    ZStack {
+                        HStack {
                             Button {
-                                myDate.day = days
-                            }label: {
-                                if days != 0 {
-                                    ZStack {
-                                        if CheckCalendarInCoreData(day: days) {
-                                            Circle()
-                                                .frame(width: 30, height: 30)
-                                                .foregroundColor(backgroundColor2)
-                                        }
-                                        if days == todayDay && myDate.month == todayMonth && myDate.year == todayYear {
-                                            Circle()
-                                                .frame(width: 30, height: 30)
-                                                .foregroundColor(backgroundColor3)
-                                        }
-                                        if days == myDate.day {
-                                            Circle()
-                                                .frame(width: 30, height: 30)
-                                                .foregroundColor(buttonColor)
-                                        }
-                                        Text(String(days))
-                                    }
-                                }else{
-                                    Text("")
-                                }
+                                myDate.year = components.year ?? 2022
+                                myDate.month = components.month ?? 2
+                                myDate.day = components.day ?? 26
+                                dayArray = calendarFunction.DayInArray(year: myDate.year, month: myDate.month)
+                            } label: {
+                                Text("Today")
+                                    .foregroundColor(buttonColor)
                             }
-                            .frame(width: 30, height: 30)
+                            Spacer()
+                        }
+                        Text("\(String(myDate.day))/\(String(myDate.month))/\(String(myDate.year))")
+                            .font(.title)
+                    }
+                    .padding(.horizontal)
+                    HStack {
+                        ForEach(weekDays, id: \.self) { days in
+                            Spacer()
+                            Text(days)
+                                .frame(width: buttonSize < 40 ? 40 : buttonSize, height: buttonSize)
                             Spacer()
                         }
                     }
+                    ForEach(0..<dayArray.count, id: \.self) { weeks in
+                        HStack {
+                            ForEach(dayArray[weeks], id: \.self) { days in
+                                Spacer()
+                                Button {
+                                    myDate.day = days
+                                }label: {
+                                    if days != 0 {
+                                        ZStack {
+                                            if CheckCalendarInCoreData(day: days) {
+                                                Circle()
+                                                    .frame(width: buttonSize, height: buttonSize)
+                                                    .foregroundColor(backgroundColor2)
+                                            }
+                                            if days == todayDay && myDate.month == todayMonth && myDate.year == todayYear {
+                                                Circle()
+                                                    .frame(width: buttonSize, height: buttonSize)
+                                                    .foregroundColor(backgroundColor3)
+                                            }
+                                            if days == myDate.day {
+                                                Circle()
+                                                    .frame(width: buttonSize, height: buttonSize)
+                                                    .foregroundColor(buttonColor)
+                                            }
+                                            Text(String(days))
+                                        }
+                                    }else{
+                                        Text("")
+                                    }
+                                }
+                                .frame(width: buttonSize, height: buttonSize)
+                                Spacer()
+                            }
+                        }
+                    }
                 }
-                Spacer()
+                .foregroundColor(textColor)
             }
-            .foregroundColor(textColor)
         }
         .onAppear() {
             todayYear = components.year ?? 2022
