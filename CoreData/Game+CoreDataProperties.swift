@@ -16,7 +16,7 @@ extension Game {
         return NSFetchRequest<Game>(entityName: "Game")
     }
 
-    @NSManaged public var uuid: UUID?
+    @NSManaged public var uuid: String?
     @NSManaged public var time: Date?
     @NSManaged public var scoringMethod: String?
     @NSManaged public var distance: String?
@@ -24,8 +24,8 @@ extension Game {
     @NSManaged public var average: Double
     @NSManaged public var roundData: NSSet?
     
-    public var wrappedID: UUID {
-        uuid ?? UUID()
+    public var wrappedID: String {
+        uuid ?? ""
     }
     
     public var wrappedTime: Date {

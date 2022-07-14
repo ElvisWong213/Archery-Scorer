@@ -22,7 +22,7 @@ struct PersistenceController {
             newItem.game = Game(context: viewContext)
             newItem.game?.distance = "10"
             newItem.game?.average = 10.0
-            newItem.game?.uuid = UUID()
+            newItem.game?.uuid = UUID().uuidString
             newItem.game?.time = Date()
             newItem.game?.total = 10
         }

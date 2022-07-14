@@ -9,10 +9,10 @@ import Foundation
 import CoreData
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "Archery_Scorer")
+    let container = NSPersistentCloudKitContainer(name: "Archery_Scorer")
     
     static var preview: DataController = {
-        let result = DataController(inMemory: true)
+        let result = DataController()
         let viewContext = result.container.viewContext
 //        for _ in 0..<5 {
         let newItem = Round(context: viewContext)
@@ -24,7 +24,7 @@ class DataController: ObservableObject {
         newItem.game?.scoringMethod = "6"
         newItem.game?.distance = "10"
         newItem.game?.average = 10.0
-        newItem.game?.uuid = UUID()
+        newItem.game?.uuid = UUID().uuidString
         newItem.game?.time = Date()
         newItem.game?.total = 10
 //        }
@@ -40,10 +40,6 @@ class DataController: ObservableObject {
     }()
     
     init(inMemory: Bool = false) {
-        let description = NSPersistentStoreDescription()
-        description.shouldMigrateStoreAutomatically = true
-        description.shouldInferMappingModelAutomatically = true
-        container.persistentStoreDescriptions =  [description]
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

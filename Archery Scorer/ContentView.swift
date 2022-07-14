@@ -12,12 +12,12 @@ struct ContentView: View {
     @State var startButton = false
     
     @StateObject var startData = StartData()
-    @StateObject var appState = BaseViewModel()
+    @EnvironmentObject var appState: BaseViewModel
     @StateObject var coreDataGameId = CoreDataGameID()
     @StateObject var myDate = MyDate()
     
     var body: some View {
-        Group {
+        ZStack {
             switch appState.baseView {
                 case .home:
                     HomeView()
@@ -27,6 +27,7 @@ struct ContentView: View {
                     .environmentObject(appState)
                 case .add:
                     AddView()
+                    .transition(AnyTransition.move(edge: .bottom))
                     .environmentObject(startData)
                     .environmentObject(appState)
                 case .record:
@@ -37,6 +38,7 @@ struct ContentView: View {
                     .environmentObject(appState)
                 case .review:
                     ReviewRecordView()
+                    .transition(AnyTransition.move(edge: .bottom))
                     .environmentObject(coreDataGameId)
                     .environmentObject(startData)
                     .environmentObject(appState)
@@ -46,6 +48,7 @@ struct ContentView: View {
                     .environmentObject(appState)
             }
         }
+        .animation(.easeInOut(duration: 0.25), value: appState.baseView == .add || appState.baseView == .review)
         .preferredColorScheme(.dark)
     }
 }

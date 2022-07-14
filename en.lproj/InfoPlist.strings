@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Archery Scorer
+
+  Created by Elvis on 6/7/2022.
+  
+*/
+"QUICK_ACTION_CREATE_TITLE" = "Create new game";
+"QUICK_ACTION_STATISTICS_TITLE" = "View Chart";

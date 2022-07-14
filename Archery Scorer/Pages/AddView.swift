@@ -66,7 +66,6 @@ struct AddView: View {
                             .font(.title2)
                             .foregroundColor(buttonColor)
                     }
-                    .frame(width: 40)
                     Text("Zone")
                 }
                 .padding()

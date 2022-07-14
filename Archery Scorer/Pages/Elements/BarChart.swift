@@ -106,9 +106,11 @@ struct SubBarView: View {
             RoundedRectangle(cornerRadius: 5.0)
                 .foregroundColor(findColor(i: i, scoringMethod: scoringMethod))
                 .frame(height: barHeight[i], alignment: .trailing)
+                .transition(AnyTransition.move(edge: .bottom))
             Text(mark[i])
                 .fontWeight(.bold)
         }
+        .animation(.easeInOut, value: barHeight[i])
     }
     
     func findColor(i: Int, scoringMethod: String) -> Color {

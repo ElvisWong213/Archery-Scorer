@@ -12,16 +12,21 @@
 		AA2C24A3281E9D520071AB2A /* FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C24A2281E9D520071AB2A /* FilterBar.swift */; };
 		AA3C167028510BAB00ACAB96 /* Archery_ScorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C166F28510BAB00ACAB96 /* Archery_ScorerUITests.swift */; };
 		AA3C167228510BAB00ACAB96 /* Archery_ScorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C167128510BAB00ACAB96 /* Archery_ScorerUITestsLaunchTests.swift */; };
+		AA510DF32874621600803926 /* UUIDToStringUUIDPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA510DF22874621600803926 /* UUIDToStringUUIDPolicy.swift */; };
+		AA510E062875956100803926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA510E082875956100803926 /* InfoPlist.strings */; };
+		AA510E132875F32500803926 /* MappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA510E122875F32500803926 /* MappingModel.xcmappingmodel */; };
 		AA5BC22E27E329D700C268F3 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BC22D27E329D700C268F3 /* RecordView.swift */; };
 		AA5BC23027E3A6B400C268F3 /* TargetBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */; };
 		AA65E78627EB290D00347BB6 /* MyClassAndObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */; };
 		AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA687B0A27F463AA00865805 /* StatisticsView.swift */; };
+		AA96D44E2879F0B9007BE443 /* ExportPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96D44D2879F0B9007BE443 /* ExportPopUp.swift */; };
 		AA9855D327E8D1E500EC4A22 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D227E8D1E500EC4A22 /* Persistence.swift */; };
 		AA9855D827E8EB0300EC4A22 /* Round+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */; };
 		AA9855D927E8EB0300EC4A22 /* Round+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D527E8EB0300EC4A22 /* Round+CoreDataProperties.swift */; };
 		AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */; };
 		AA9855DB27E8EB0300EC4A22 /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */; };
 		AA9855DD27E8F12E00EC4A22 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855DC27E8F12E00EC4A22 /* DataController.swift */; };
+		AAC5DC68287A0B3E0022A559 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5DC67287A0B3E0022A559 /* ActivityView.swift */; };
 		AAE0A13A27E202700084B04B /* ListOfRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0A13927E202700084B04B /* ListOfRecord.swift */; };
 		AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAE0A14027E228CA0084B04B /* Localizable.strings */; };
 		AAE0A14327E232AE0084B04B /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0A14227E232AE0084B04B /* AddView.swift */; };
@@ -58,18 +63,24 @@
 		AA3C166F28510BAB00ACAB96 /* Archery_ScorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archery_ScorerUITests.swift; sourceTree = "<group>"; };
 		AA3C167128510BAB00ACAB96 /* Archery_ScorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archery_ScorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AA510DEF2874426500803926 /* Archery_Scorer 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Archery_Scorer 2.xcdatamodel"; sourceTree = "<group>"; };
+		AA510DF22874621600803926 /* UUIDToStringUUIDPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDToStringUUIDPolicy.swift; sourceTree = "<group>"; };
+		AA510E022875948C00803926 /* Archery-Scorer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Archery-Scorer-Info.plist"; sourceTree = "<group>"; };
+		AA510E072875956100803926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AA510E092875956200803926 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		AA510E122875F32500803926 /* MappingModel.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = MappingModel.xcmappingmodel; sourceTree = "<group>"; };
 		AA5BC22D27E329D700C268F3 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBoard.swift; sourceTree = "<group>"; };
 		AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassAndObject.swift; sourceTree = "<group>"; };
 		AA687B0A27F463AA00865805 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		AA96D44D2879F0B9007BE443 /* ExportPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPopUp.swift; sourceTree = "<group>"; };
 		AA9855D227E8D1E500EC4A22 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AA9855D527E8EB0300EC4A22 /* Round+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AA9855DC27E8F12E00EC4A22 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		AAC5DC67287A0B3E0022A559 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		AAE0A13927E202700084B04B /* ListOfRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRecord.swift; sourceTree = "<group>"; };
-		AAE0A13B27E223F00084B04B /* Archery-Scorer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Archery-Scorer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AAE0A13F27E228CA0084B04B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAE0A14127E228F30084B04B /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		AAE0A14227E232AE0084B04B /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
@@ -129,12 +140,14 @@
 		AA9855B927E8B1E400EC4A22 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				AA510E122875F32500803926 /* MappingModel.xcmappingmodel */,
 				AAE2694727E1C00600483891 /* Archery_Scorer.xcdatamodeld */,
 				AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */,
 				AA9855D527E8EB0300EC4A22 /* Round+CoreDataProperties.swift */,
 				AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */,
 				AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */,
 				AA9855DC27E8F12E00EC4A22 /* DataController.swift */,
+				AA510DF22874621600803926 /* UUIDToStringUUIDPolicy.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -142,6 +155,8 @@
 		AAE2693027E1C00500483891 = {
 			isa = PBXGroup;
 			children = (
+				AA510E082875956100803926 /* InfoPlist.strings */,
+				AA510E022875948C00803926 /* Archery-Scorer-Info.plist */,
 				AA9855B927E8B1E400EC4A22 /* CoreData */,
 				AAE0A14027E228CA0084B04B /* Localizable.strings */,
 				AAE2693B27E1C00500483891 /* Archery Scorer */,
@@ -164,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				AAF87C7D2847E13900D24BC9 /* Archery Scorer.entitlements */,
-				AAE0A13B27E223F00084B04B /* Archery-Scorer-Info.plist */,
 				AAE2694F27E1C18B00483891 /* Pages */,
 				AAE2693C27E1C00500483891 /* Archery_ScorerApp.swift */,
 				AAEACE5F27E5D0C800B9A0B3 /* ContentView.swift */,
@@ -210,6 +224,8 @@
 				AAEEC8BF27EDCA410062DDBB /* LineChart.swift */,
 				AA2C24A0281E74510071AB2A /* ChartCombine.swift */,
 				AA2C24A2281E9D520071AB2A /* FilterBar.swift */,
+				AA96D44D2879F0B9007BE443 /* ExportPopUp.swift */,
+				AAC5DC67287A0B3E0022A559 /* ActivityView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -304,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE2694427E1C00600483891 /* Preview Assets.xcassets in Resources */,
+				AA510E062875956100803926 /* InfoPlist.strings in Resources */,
 				AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */,
 				AAE2694127E1C00600483891 /* Assets.xcassets in Resources */,
 			);
@@ -326,6 +343,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5BC23027E3A6B400C268F3 /* TargetBoard.swift in Sources */,
+				AA510DF32874621600803926 /* UUIDToStringUUIDPolicy.swift in Sources */,
+				AA96D44E2879F0B9007BE443 /* ExportPopUp.swift in Sources */,
 				AAE0A14327E232AE0084B04B /* AddView.swift in Sources */,
 				AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */,
 				AAEACE6427E71CE500B9A0B3 /* ScoreBoard2.swift in Sources */,
@@ -334,11 +353,13 @@
 				AA2C24A3281E9D520071AB2A /* FilterBar.swift in Sources */,
 				AAEEC8C027EDCA410062DDBB /* LineChart.swift in Sources */,
 				AA5BC22E27E329D700C268F3 /* RecordView.swift in Sources */,
+				AA510E132875F32500803926 /* MappingModel.xcmappingmodel in Sources */,
 				AAE2695427E1C34600483891 /* BottomBar.swift in Sources */,
 				AA65E78627EB290D00347BB6 /* MyClassAndObject.swift in Sources */,
 				AAE2694927E1C00600483891 /* Archery_Scorer.xcdatamodeld in Sources */,
 				AAEACE6227E71A8F00B9A0B3 /* ScoreBoard.swift in Sources */,
 				AAE2695127E1C1E800483891 /* HomeView.swift in Sources */,
+				AAC5DC68287A0B3E0022A559 /* ActivityView.swift in Sources */,
 				AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */,
 				AA9855DD27E8F12E00EC4A22 /* DataController.swift in Sources */,
 				AA9855D327E8D1E500EC4A22 /* Persistence.swift in Sources */,
@@ -364,6 +385,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AA510E082875956100803926 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA510E072875956100803926 /* en */,
+				AA510E092875956200803926 /* zh-HK */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		AAE0A14027E228CA0084B04B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -536,7 +566,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -547,6 +577,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -555,7 +586,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -573,7 +604,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -584,6 +615,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -592,7 +624,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -641,7 +673,7 @@
 				AA510DEF2874426500803926 /* Archery_Scorer 2.xcdatamodel */,
 				AAE2694827E1C00600483891 /* Archery_Scorer.xcdatamodel */,
 			);
-			currentVersion = AAE2694827E1C00600483891 /* Archery_Scorer.xcdatamodel */;
+			currentVersion = AA510DEF2874426500803926 /* Archery_Scorer 2.xcdatamodel */;
 			path = Archery_Scorer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

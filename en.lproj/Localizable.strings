@@ -49,3 +49,7 @@
 "Year" = "Year";
 "Average Score" = "Average Score";
 "Not Enought Data" = "Not Enought Data";
+
+// ExportPopUp
+"Export Format" = "Export Format";
+"Image" = "Image";

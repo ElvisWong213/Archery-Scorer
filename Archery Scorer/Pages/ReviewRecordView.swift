@@ -20,8 +20,6 @@ struct ReviewRecordView: View {
     @EnvironmentObject var startData: StartData
     @EnvironmentObject var appState: BaseViewModel
     @EnvironmentObject var coreDataGameID: CoreDataGameID
-    @Environment(\.managedObjectContext) var moc
-
     
     let titles = [NSLocalizedString("Lengths: ", comment: ""), NSLocalizedString("Weight: ",comment: ""), NSLocalizedString("Distance: ", comment: "")]
     let units = [NSLocalizedString("inch", comment: ""), NSLocalizedString("lbs", comment: ""), NSLocalizedString("m", comment: "")]
@@ -32,7 +30,9 @@ struct ReviewRecordView: View {
     let topItem = [NSLocalizedString("End", comment: ""), "1", "2", "3", "3S", "6S"]
     
     @State var textCollapse = true
-    
+    @State private var showPopUp = false
+    @State var myImage = UIImage()
+       
     var screenshotView: some View {
         VStack {
             HStack(alignment: .center) {
@@ -178,20 +178,17 @@ struct ReviewRecordView: View {
                         .ignoresSafeArea()
                     HStack {
                         Button {
-                            let image = screenshotView.snapshot()
-                            let shareActivity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-                                  if let vc = UIApplication.shared.windows.first?.rootViewController{
-                                      shareActivity.popoverPresentationController?.sourceView = vc.view
-                                     //Setup share activity position on screen on bottom center
-                                      shareActivity.popoverPresentationController?.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height * 0.9, width: 0, height: 0)
-                                      shareActivity.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.down
-                                     vc.present(shareActivity, animated: true, completion: nil)
-                                  }
+                            showPopUp = true
+                            myImage = screenshotView.snapshot()
                         }label: {
                             Image(systemName: "square.and.arrow.up")
                                 .foregroundColor(buttonColor)
                                 .font(.system(size: buttonSize))
                                 .padding(.horizontal)
+                        }
+                        .popover(isPresented: $showPopUp) {
+                            ExportPopUp(showPopUp: $showPopUp, myImage: $myImage)
+                                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.8)
                         }
                     }
                 }

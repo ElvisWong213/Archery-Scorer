@@ -69,7 +69,6 @@ struct FilterBar: View {
                         .font(.title2)
                         .foregroundColor(buttonColor)
                 }
-                .frame(width: 40)
                 Spacer()
                 Text("Scoring Method: ")
                 Menu {
@@ -83,7 +82,6 @@ struct FilterBar: View {
                         .font(.title2)
                         .foregroundColor(buttonColor)
                 }
-                .frame(width: 40)
                 Spacer()
             }
             HStack {

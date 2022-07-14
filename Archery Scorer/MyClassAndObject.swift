@@ -321,7 +321,7 @@ class FilterBarFunction {
 
 class BaseViewModel: ObservableObject {
     @Published var baseView: UserFlow = .home
-    
+
     enum UserFlow {
         case home, add, record, review, statistic
     }
@@ -334,7 +334,7 @@ class StartData: ObservableObject {
 }
 
 class CoreDataGameID: ObservableObject {
-    @Published var gameID: UUID = UUID()
+    @Published var gameID: String = UUID().uuidString
     @Published var edit = false
     @Published var scoreData: [[ScoreData]] = Array(repeating: Array(repeating: ScoreData(score: "", location: CGPoint.init(x: -1, y: -1)), count: 6), count: 6)
 }
@@ -351,7 +351,6 @@ class MyDate: ObservableObject {
         year = components.year ?? 2022
         month = components.month ?? 2
         day = components.day ?? 26
-        selectedRange = FindToday()
     }
     
     func FindStartDate() -> NSDate {

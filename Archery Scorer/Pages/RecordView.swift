@@ -64,7 +64,7 @@ struct RecordView: View {
                     Button {
                         let totalScore = scoreDataFunction.TotalScore(scoreData: scoreData)
                         let averageScore = scoreDataFunction.AverageScore(scoreData: scoreData, countNilValue: false)
-                        var gameID = UUID()
+                        var gameID = UUID().uuidString
                         if coreDataGameID.edit {
                             gameID = coreDataGameID.gameID
                             for game in games {
@@ -74,6 +74,13 @@ struct RecordView: View {
                                 }
                             }
                         }
+                        let saveGame = Game(context: moc)
+                        saveGame.scoringMethod = startData.scoringMethod
+                        saveGame.distance = startData.distance
+                        saveGame.average = averageScore
+                        saveGame.uuid = gameID
+                        saveGame.time = startData.time
+                        saveGame.total = Int32(totalScore)
                         var array = [Round(context: moc)]
                         var counter = 0
                         for i in scoreData {
@@ -83,13 +90,7 @@ struct RecordView: View {
                                 dummy.x = j.location!.x
                                 dummy.y = j.location!.y
                                 dummy.index = Int32(counter)
-                                dummy.game = Game(context: moc)
-                                dummy.game?.scoringMethod = startData.scoringMethod
-                                dummy.game?.distance = startData.distance
-                                dummy.game?.average = averageScore
-                                dummy.game?.uuid = gameID
-                                dummy.game?.time = startData.time
-                                dummy.game?.total = Int32(totalScore)
+                                dummy.game = saveGame
                                 counter += 1
                                 array.append(dummy)
                             }

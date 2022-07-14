@@ -47,6 +47,8 @@ struct LineChart: View {
                                     .position(x: x, y: gr.size.height * 0.9)
                             }
                         }
+                        .transition(AnyTransition.opacity)
+                        .animation(.linear, value: score)
                     }
                     .foregroundColor(color)
                     .padding([.top, .leading, .trailing])

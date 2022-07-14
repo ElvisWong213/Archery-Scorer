@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconSymbolName</key>
+			<string>plus</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>QUICK_ACTION_CREATE_TITLE</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>CreateAction</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconSymbolName</key>
+			<string>chart.bar.xaxis</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>QUICK_ACTION_STATISTICS_TITLE</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>StatisticsAction</string>
+		</dict>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

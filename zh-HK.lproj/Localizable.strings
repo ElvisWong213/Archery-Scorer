@@ -61,3 +61,6 @@
 "Average Score" = "平均分";
 "Not Enought Data" = "數據不足";
 
+// ExportPopUp
+"Export Format" = "輸出格式";
+"Image" = "圖片";
