@@ -61,6 +61,29 @@ struct ReviewRecordView: View {
                 Text("\(ScoreDataFunction().AverageScore(scoreData: coreDataGameID.scoreData, countNilValue: false), specifier: "%.2f")")
                 Spacer()
             }
+            let boxWidth = UIScreen.main.bounds.width * 0.12
+            HStack {
+                ForEach(0..<6, id: \.self) { i in
+                    if i == 0 {
+                        VStack {
+                            Text("R")
+                                .frame(width: boxWidth, height: boxWidth)
+                                .background(buttonColor)
+                            Text("S")
+                                .frame(width: boxWidth, height: boxWidth)
+                                .background(buttonColor)
+                        }
+                    }
+                    VStack {
+                        Text(String(i + 1))
+                            .frame(width: boxWidth, height: boxWidth)
+                            .background(buttonColor)
+                        Text(String(ScoreDataFunction().SixArrowTotal(scoreDate: coreDataGameID.scoreData, i: Int(i))))
+                            .frame(width: boxWidth, height: boxWidth)
+                            .background(buttonColor)
+                    }
+                }
+            }
         }
         .font(.title2)
         .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.width * 16 / 9, alignment: .center)
@@ -187,8 +210,13 @@ struct ReviewRecordView: View {
                                 .padding(.horizontal)
                         }
                         .popover(isPresented: $showPopUp) {
-                            ExportPopUp(showPopUp: $showPopUp, myImage: $myImage)
-                                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.8)
+                            if UIDevice.current.userInterfaceIdiom == .pad {
+                                ExportPopUp(showPopUp: $showPopUp, myImage: $myImage)
+                                    .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.8)
+                            }
+                            else if UIDevice.current.userInterfaceIdiom == .phone {
+                                ExportPopUp(showPopUp: $showPopUp, myImage: $myImage)
+                            }
                         }
                     }
                 }

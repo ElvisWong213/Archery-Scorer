@@ -109,7 +109,7 @@ struct ScoreBoardSecondView: View {
         VStack {
             ForEach(0..<2, id: \.self) { j in
                 HStack {
-                    ForEach((0..<3), id: \.self) { k in
+                    ForEach(0..<3, id: \.self) { k in
                         let data = scoreData[i][j * 3 + k]
                         let display = data.score
                         let selected = CheckBox(selectedBox: selectedBox, i: i, j: j, k: k, selectedRowButton: selectedRowButton)

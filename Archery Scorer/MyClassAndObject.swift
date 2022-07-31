@@ -362,25 +362,29 @@ class MyDate: ObservableObject {
     }
     
     func FindEndDate() -> NSDate {
-        var endDay = 0
+        var endDay = 1
+        var skip = false
         let bigMonths = [1, 3, 5, 7, 8, 10, 12]
         for i in bigMonths {
             if month == i {
                 endDay = 31
+                skip = true
             }
         }
-        if month == 2 && year % 4 == 0{
-            endDay = 29
-        }else if month == 2 && year % 4 != 0 {
-            endDay = 28
-        }
-        else{
-            endDay = 30
+        if skip == false {
+            if month == 2 && year % 4 == 0{
+                endDay = 29
+            }else if month == 2 && year % 4 != 0 {
+                endDay = 28
+            }
+            else{
+                endDay = 30
+            }    
         }
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateInString = String(self.year) + "-" + String(self.month) + "-" + String(endDay)
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateInString = String(self.year) + "-" + String(self.month) + "-" + String(endDay) + " 23:59:59"
         let date = dateFormatter.date(from: dateInString)!
         return date as NSDate
     }

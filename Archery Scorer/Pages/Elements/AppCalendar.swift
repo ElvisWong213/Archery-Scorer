@@ -22,7 +22,7 @@ struct AppCalendar: View {
     let weekDays = [NSLocalizedString("Sun", comment: ""), NSLocalizedString("Mon", comment: ""), NSLocalizedString("Tue", comment: ""), NSLocalizedString("Wed", comment: ""), NSLocalizedString("Thu", comment: ""), NSLocalizedString("Fri", comment: ""), NSLocalizedString("Sat", comment: "")]
     @State var dayArray: [[Int]] = [[]]
     
-    let components = Calendar.current.dateComponents([.year, .month, .day], from: Date.now)
+    var components = Calendar.current.dateComponents([.year, .month, .day], from: Date.now)
     
     @State var todayYear = 2022
     @State var todayMonth = 2
@@ -30,6 +30,8 @@ struct AppCalendar: View {
     
     init(startDate: NSDate, endDate: NSDate) {
         _games = FetchRequest<Game>(sortDescriptors: [], predicate: NSPredicate(format: "(time >= %@) AND (time <= %@)", startDate, endDate))
+        components = Calendar.current.dateComponents([.year, .month, .day], from: Date.now)
+
     }
     
     var body: some View {
