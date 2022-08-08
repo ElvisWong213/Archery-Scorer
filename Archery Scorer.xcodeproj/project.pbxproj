@@ -19,6 +19,7 @@
 		AA5BC23027E3A6B400C268F3 /* TargetBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */; };
 		AA65E78627EB290D00347BB6 /* MyClassAndObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */; };
 		AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA687B0A27F463AA00865805 /* StatisticsView.swift */; };
+		AA732DAA28A00389006B7D4C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA732DA928A00389006B7D4C /* WelcomeView.swift */; };
 		AA96D44E2879F0B9007BE443 /* ExportPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA96D44D2879F0B9007BE443 /* ExportPopUp.swift */; };
 		AA9855D327E8D1E500EC4A22 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D227E8D1E500EC4A22 /* Persistence.swift */; };
 		AA9855D827E8EB0300EC4A22 /* Round+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */; };
@@ -72,6 +73,7 @@
 		AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetBoard.swift; sourceTree = "<group>"; };
 		AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassAndObject.swift; sourceTree = "<group>"; };
 		AA687B0A27F463AA00865805 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		AA732DA928A00389006B7D4C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		AA96D44D2879F0B9007BE443 /* ExportPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPopUp.swift; sourceTree = "<group>"; };
 		AA9855D227E8D1E500EC4A22 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AA9855D427E8EB0300EC4A22 /* Round+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Round+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -201,12 +203,13 @@
 		AAE2694F27E1C18B00483891 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				AAE2695227E1C32300483891 /* Elements */,
 				AAE2695027E1C1E800483891 /* HomeView.swift */,
 				AA687B0A27F463AA00865805 /* StatisticsView.swift */,
-				AAE2695227E1C32300483891 /* Elements */,
 				AAE0A14227E232AE0084B04B /* AddView.swift */,
 				AA5BC22D27E329D700C268F3 /* RecordView.swift */,
 				AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */,
+				AA732DA928A00389006B7D4C /* WelcomeView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				AA510E132875F32500803926 /* MappingModel.xcmappingmodel in Sources */,
 				AAE2695427E1C34600483891 /* BottomBar.swift in Sources */,
 				AA65E78627EB290D00347BB6 /* MyClassAndObject.swift in Sources */,
+				AA732DAA28A00389006B7D4C /* WelcomeView.swift in Sources */,
 				AAE2694927E1C00600483891 /* Archery_Scorer.xcdatamodeld in Sources */,
 				AAEACE6227E71A8F00B9A0B3 /* ScoreBoard.swift in Sources */,
 				AAE2695127E1C1E800483891 /* HomeView.swift in Sources */,
@@ -566,7 +570,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -586,7 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -604,7 +608,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -624,7 +628,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

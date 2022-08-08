@@ -61,6 +61,19 @@
 "Average Score" = "平均分";
 "Not Enought Data" = "數據不足";
 
+// WellcomeView
+"Wellcome to" = "歡迎使用";
+"Tap" = "點選";
+"Tap to mark your score and position." = "點選並記錄你的分數";
+"Analyze" = "分析";
+"Analyze your score with chart." = "在圖表分析你的成績";
+"Share" = "分享";
+"Share your score to social media and more." = "分享你的成績到社交網站";
+"Sync" = "同步";
+"Sync your data on iPad and iPhone." = "同步iPhone和iPad的資料";
+"More" = "更多";
+"More and more features." = "更多的功能";
+
 // ExportPopUp
 "Export Format" = "輸出格式";
 "Image" = "圖片";

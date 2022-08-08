@@ -50,6 +50,19 @@
 "Average Score" = "Average Score";
 "Not Enought Data" = "Not Enought Data";
 
+// WellcomeView
+"Wellcome to" = "Wellcome to";
+"Tap" = "Tap";
+"Tap to mark your score and position." = "Tap to mark your score and position.";
+"Analyze" = "Analyze";
+"Analyze your score with chart." = "Analyze your score with chart.";
+"Share" = "Share";
+"Share your score to social media and more." = "Share your score to social media and more.";
+"Sync" = "Sync";
+"Sync your data on iPad and iPhone." = "Sync your data on iPad and iPhone.";
+"More" = "More";
+"More and more features." = "More and more features.";
+
 // ExportPopUp
 "Export Format" = "Export Format";
 "Image" = "Image";

@@ -16,36 +16,42 @@ struct ContentView: View {
     @StateObject var coreDataGameId = CoreDataGameID()
     @StateObject var myDate = MyDate()
     
+    @AppStorage("wlcome") var welcome: Bool = true
+    
     var body: some View {
         ZStack {
-            switch appState.baseView {
-                case .home:
-                    HomeView()
-                    .environmentObject(coreDataGameId)
-                    .environmentObject(startData)
-                    .environmentObject(myDate)
-                    .environmentObject(appState)
-                case .add:
-                    AddView()
-                    .transition(AnyTransition.move(edge: .bottom))
-                    .environmentObject(startData)
-                    .environmentObject(appState)
-                case .record:
-                    RecordView()
-                    .environmentObject(coreDataGameId)
-                    .environmentObject(startData)
-                    .environmentObject(myDate)
-                    .environmentObject(appState)
-                case .review:
-                    ReviewRecordView()
-                    .transition(AnyTransition.move(edge: .bottom))
-                    .environmentObject(coreDataGameId)
-                    .environmentObject(startData)
-                    .environmentObject(appState)
-                case .statistic:
-                    StatisticsView()
-                    .environmentObject(myDate)
-                    .environmentObject(appState)
+            if welcome {
+                WelcomeView(wellcome: $welcome)
+            } else {
+                switch appState.baseView {
+                    case .home:
+                        HomeView()
+                        .environmentObject(coreDataGameId)
+                        .environmentObject(startData)
+                        .environmentObject(myDate)
+                        .environmentObject(appState)
+                    case .add:
+                        AddView()
+                        .transition(AnyTransition.move(edge: .bottom))
+                        .environmentObject(startData)
+                        .environmentObject(appState)
+                    case .record:
+                        RecordView()
+                        .environmentObject(coreDataGameId)
+                        .environmentObject(startData)
+                        .environmentObject(myDate)
+                        .environmentObject(appState)
+                    case .review:
+                        ReviewRecordView()
+                        .transition(AnyTransition.move(edge: .bottom))
+                        .environmentObject(coreDataGameId)
+                        .environmentObject(startData)
+                        .environmentObject(appState)
+                    case .statistic:
+                        StatisticsView()
+                        .environmentObject(myDate)
+                        .environmentObject(appState)
+                }
             }
         }
         .animation(.easeInOut(duration: 0.25), value: appState.baseView == .add || appState.baseView == .review)
