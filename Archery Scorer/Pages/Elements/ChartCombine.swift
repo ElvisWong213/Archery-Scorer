@@ -166,7 +166,7 @@ struct ChartCombine: View {
             var dummyDate =  Calendar.current.dateComponents([.year, .month, .day], from: fetchRequest[0].wrappedTime)
             var counter = 0
             for i in fetchRequest {
-                if counter > 0 && Calendar.current.dateComponents([.year, .month, .day], from: i.wrappedTime).day != dummyDate.day {
+                if counter > 0 && Calendar.current.dateComponents([.year, .month, .day], from: i.wrappedTime).month != dummyDate.month {
                     output.append(String(dummyDate.month ?? -1))
                     dummyDate = Calendar.current.dateComponents([.year, .month, .day], from: i.wrappedTime)
                 }

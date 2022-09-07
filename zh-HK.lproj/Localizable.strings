@@ -77,3 +77,7 @@
 // ExportPopUp
 "Export Format" = "輸出格式";
 "Image" = "圖片";
+
+//ListOfRecord
+"Are you sure you want to delete this?" = "你確定要刪除?";
+"It cannot be undo" = "刪除後無法撤消";

@@ -238,6 +238,12 @@ struct ShowDateView: View {
                 myDate.selectedRange[0] = Calendar.current.date(byAdding: .month, value: -1, to: myDate.selectedRange[0] as Date)! as NSDate
                 myDate.selectedRange[1] = Calendar.current.date(byAdding: .month, value: -1, to: myDate.selectedRange[1] as Date)! as NSDate
             }
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy"
+            let year = Int(formatter.string(from: myDate.selectedRange[0] as Date)) ?? 2022
+            formatter.dateFormat = "MM"
+            let month = Int(formatter.string(from: myDate.selectedRange[0] as Date)) ?? 5
+            myDate.selectedRange = filterBarFunction.FindMonthRange(year: year, month: month)
         }
         else if myRange == "Year" {
             if next {

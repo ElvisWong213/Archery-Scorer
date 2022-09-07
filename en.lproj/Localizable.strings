@@ -66,3 +66,7 @@
 // ExportPopUp
 "Export Format" = "Export Format";
 "Image" = "Image";
+
+//ListOfRecord
+"Are you sure you want to delete this?" = "Are you sure you want to delete this?";
+"It cannot be undo" = "It cannot be undo";

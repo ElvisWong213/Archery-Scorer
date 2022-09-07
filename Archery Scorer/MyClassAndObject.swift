@@ -363,21 +363,15 @@ class MyDate: ObservableObject {
     
     func FindEndDate() -> NSDate {
         var endDay = 1
-        var skip = false
         let bigMonths = [1, 3, 5, 7, 8, 10, 12]
-        for i in bigMonths {
-            if month == i {
-                endDay = 31
-                skip = true
-            }
-        }
-        if skip == false {
-            if month == 2 && year % 4 == 0{
+        if bigMonths.contains(self.month) {
+            endDay = 31
+        } else {
+            if self.month == 2 && self.year % 4 == 0{
                 endDay = 29
-            }else if month == 2 && year % 4 != 0 {
+            } else if self.month == 2 && self.year % 4 != 0 {
                 endDay = 28
-            }
-            else{
+            } else {
                 endDay = 30
             }    
         }
@@ -391,10 +385,10 @@ class MyDate: ObservableObject {
     
     func FindToday() -> [NSDate] {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let startDateInString = String(self.year) + "-" + String(self.month) + "-" + String(self.day) + " 00:00"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let startDateInString = String(self.year) + "-" + String(self.month) + "-" + String(self.day) + " 00:00:00"
         let startDate = dateFormatter.date(from: startDateInString)!
-        let endDateInString = String(self.year) + "-" + String(self.month) + "-" + String(self.day) + " 23:59"
+        let endDateInString = String(self.year) + "-" + String(self.month) + "-" + String(self.day) + " 23:59:59"
         let endDate = dateFormatter.date(from: endDateInString)!
         return [startDate, endDate] as [NSDate]
     }

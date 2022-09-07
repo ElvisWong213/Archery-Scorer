@@ -22,6 +22,8 @@ struct ListOfRecord: View {
     @FetchRequest var games: FetchedResults<Game>
     
     @State var mode: EditMode = .inactive
+    @State var confirmDelete = false
+    @State var index = IndexSet()
 
     init(startDate: NSDate, endDate: NSDate) {
         _games = FetchRequest<Game>(sortDescriptors: [SortDescriptor(\.time)], predicate: NSPredicate(format: "(time >= %@) AND (time <= %@)", startDate, endDate))
@@ -79,7 +81,20 @@ struct ListOfRecord: View {
                     }
                 }
             }
-            .onDelete(perform: removeRecord)
+            .onDelete { (indexSet) in
+                confirmDelete = true
+                index = indexSet
+            }
+            .alert(isPresented:$confirmDelete) {
+                Alert(
+                    title: Text("Are you sure you want to delete this?"),
+                    message: Text("It cannot be undo"),
+                    primaryButton: .destructive(Text("Delete")) {
+                        removeRecord(at: index)
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
         }
         .environment(\.editMode, $mode)
         .background(backgroundColor2)
