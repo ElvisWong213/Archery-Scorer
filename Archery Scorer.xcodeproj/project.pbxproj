@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA08107528623BC7003B4EC9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA08107428623BC7003B4EC9 /* CloudKit.framework */; };
+		AA0D55F728CE22200091D330 /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0D55F628CE22200091D330 /* ReviewHandler.swift */; };
 		AA2C24A1281E74510071AB2A /* ChartCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C24A0281E74510071AB2A /* ChartCombine.swift */; };
 		AA2C24A3281E9D520071AB2A /* FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C24A2281E9D520071AB2A /* FilterBar.swift */; };
 		AA3C167028510BAB00ACAB96 /* Archery_ScorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C166F28510BAB00ACAB96 /* Archery_ScorerUITests.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		AA08107428623BC7003B4EC9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		AA0D55F628CE22200091D330 /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
 		AA2C24A0281E74510071AB2A /* ChartCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCombine.swift; sourceTree = "<group>"; };
 		AA2C24A2281E9D520071AB2A /* FilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBar.swift; sourceTree = "<group>"; };
 		AA3C166D28510BAB00ACAB96 /* Archery ScorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Archery ScorerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 				AAE2694027E1C00600483891 /* Assets.xcassets */,
 				AAE2694227E1C00600483891 /* Preview Content */,
 				AA65E78527EB290D00347BB6 /* MyClassAndObject.swift */,
+				AA0D55F628CE22200091D330 /* ReviewHandler.swift */,
 			);
 			path = "Archery Scorer";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				AAE0A13A27E202700084B04B /* ListOfRecord.swift in Sources */,
 				AAEACE6027E5D0C800B9A0B3 /* ContentView.swift in Sources */,
 				AA9855D927E8EB0300EC4A22 /* Round+CoreDataProperties.swift in Sources */,
+				AA0D55F728CE22200091D330 /* ReviewHandler.swift in Sources */,
 				AAEACE6627E77E7200B9A0B3 /* ReviewRecordView.swift in Sources */,
 				AAE2693D27E1C00500483891 /* Archery_ScorerApp.swift in Sources */,
 				AAE2695627E1C97000483891 /* AppCalendar.swift in Sources */,
@@ -570,13 +574,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Archery-Scorer-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Archery Marker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Archery Marker needs permission to write photos on your device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -590,10 +595,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -608,13 +616,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Archery-Scorer-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Archery Marker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Archery Marker needs permission to write photos on your device";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -628,10 +637,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -29,7 +29,7 @@ struct ListOfRecord: View {
         _games = FetchRequest<Game>(sortDescriptors: [SortDescriptor(\.time)], predicate: NSPredicate(format: "(time >= %@) AND (time <= %@)", startDate, endDate))
     }
     
-    var body: some View {
+    var myList: some View {
         List {
             ForEach(games) { game in
                 let dataTime = game.wrappedTime
@@ -95,10 +95,21 @@ struct ListOfRecord: View {
                     secondaryButton: .cancel()
                 )
             }
+            Text("")
+                .listRowBackground(backgroundColor2)
         }
         .environment(\.editMode, $mode)
         .background(backgroundColor2)
         .listStyle(.plain)
+    }
+    
+    var body: some View {
+        if #available(iOS 16.0, *) {
+            myList
+                .scrollContentBackground(.hidden)
+        } else if #available(iOS 15.0, *)  {
+            myList
+        }
     }
     
     func SelectedDate(dataTime: Date, year: Int, month: Int, day: Int) -> Bool {

@@ -209,6 +209,7 @@ class FilterBarFunction {
     func FindTodayRange(year: Int, month: Int, day: Int) -> [NSDate] {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let startDateInString = String(year) + "-" + String(month) + "-" + String(day) + " 00:00"
         let startDate = dateFormatter.date(from: startDateInString)!
         let endDateInString = String(year) + "-" + String(month) + "-" + String(day) + " 23:59"
@@ -275,6 +276,7 @@ class FilterBarFunction {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let startDateInString = String(startYear) + "-" + String(startMonth) + "-" + String(startDay)
         let startDate = dateFormatter.date(from: startDateInString)!
         let endDateInString = String(endYear) + "-" + String(endMonth) + "-" + String(endDay)
@@ -298,6 +300,7 @@ class FilterBarFunction {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let startDateInString = String(year) + "-" + String(month) + "-1"
         let startDate = dateFormatter.date(from: startDateInString)!
         let endDateInString = String(year) + "-" + String(month) + "-" + String(numberOfDay)
@@ -308,6 +311,7 @@ class FilterBarFunction {
     func FindYearRange(year: Int) -> [NSDate] {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let startDateInString = String(year) + "-1-1"
         let startDate = dateFormatter.date(from: startDateInString)!
         let endDateInString = String(year) + "-12-31"
@@ -356,6 +360,7 @@ class MyDate: ObservableObject {
     func FindStartDate() -> NSDate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let dateInString = String(self.year) + "-" + String(self.month) + "-1"
         let date = dateFormatter.date(from: dateInString)!
         return date as NSDate
@@ -378,6 +383,7 @@ class MyDate: ObservableObject {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let dateInString = String(self.year) + "-" + String(self.month) + "-" + String(endDay) + " 23:59:59"
         let date = dateFormatter.date(from: dateInString)!
         return date as NSDate
@@ -386,6 +392,7 @@ class MyDate: ObservableObject {
     func FindToday() -> [NSDate] {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         let startDateInString = String(self.year) + "-" + String(self.month) + "-" + String(self.day) + " 00:00:00"
         let startDate = dateFormatter.date(from: startDateInString)!
         let endDateInString = String(self.year) + "-" + String(self.month) + "-" + String(self.day) + " 23:59:59"

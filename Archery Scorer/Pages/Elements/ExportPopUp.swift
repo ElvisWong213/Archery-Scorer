@@ -26,8 +26,7 @@ struct ExportPopUp: View {
     @Binding var showPopUp: Bool
     @Binding var myImage: UIImage
 
-    
-    var body: some View {
+    var myNavigationView: some View {
         NavigationView {
             List {
                 HStack {
@@ -94,6 +93,15 @@ struct ExportPopUp: View {
                     .foregroundColor(buttonColor)
                 }
             }
+        }
+    }
+    
+    var body: some View {
+        if #available(iOS 16.0, *) {
+            myNavigationView
+                .scrollContentBackground(.hidden)
+        } else {
+            myNavigationView
         }
     }
     
