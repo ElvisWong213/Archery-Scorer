@@ -27,7 +27,6 @@ struct ReviewRecordView: View {
     @State var selectedBox = [0, 0]
     @State var selectedRowButton = false
     
-    let topItem = [NSLocalizedString("End", comment: ""), "1", "2", "3", "3S", "6S"]
     
     @State var textCollapse = true
     @State private var showPopUp = false

@@ -70,3 +70,12 @@
 //ListOfRecord
 "Are you sure you want to delete this?" = "Are you sure you want to delete this?";
 "It cannot be undo" = "It cannot be undo";
+
+// Live Activity
+"Average" = "Average";
+"Round" = "Round";
+"Total Score" = "Total Score";
+
+// Widget
+"Big Icon" = "Big Icon";
+"Show the Archery Marker with bigger icon." = "Show the Archery Marker with bigger icon.";

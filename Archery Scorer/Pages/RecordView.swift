@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import ActivityKit
 
 struct RecordView: View {
     let backgroundColor = Color("BackgroundColor")
@@ -20,8 +21,9 @@ struct RecordView: View {
     @EnvironmentObject var coreDataGameID: CoreDataGameID
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var games: FetchedResults<Game>
+    @AppStorage("review_show") var reviewShow: Bool = false
+    @Environment(\.scenePhase) var scenePhase
     
-    let topItem = [NSLocalizedString("End", comment: ""), "1", "2", "3", "3S", "6S"]
     let scoreDataFunction = ScoreDataFunction()
     
     @State var disableRowButton = false
@@ -105,6 +107,12 @@ struct RecordView: View {
                         coreDataGameID.edit = false
                         
                         appState.baseView = .home
+                        
+                        if reviewShow == false {
+                            ReviewHandler.requestReview()
+                            reviewShow = true
+                        }
+                        
                     } label: {
                         Text("Done")
                             .foregroundColor(buttonColor)
@@ -185,6 +193,69 @@ struct RecordView: View {
                             }
                         }
                     }
+                }
+            }
+            startActivity()
+        }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                print("Active")
+            } else if newPhase == .inactive {
+                updateActivity()
+            } else if newPhase == .background {
+                print("Background")
+            }
+        }
+        .onDisappear() {
+            stopActivity()
+        }
+    }
+    
+    func startActivity() {
+        let archeryWidgetAttributes = ArcheryWidgetAttributes()
+        // Date() changed to Date()...Date() - 16.1
+        let initialContentState = ArcheryWidgetAttributes.ArcheryStatus(total: scoreDataFunction.TotalScore(scoreData: scoreData), average: scoreDataFunction.AverageScore(scoreData: scoreData, countNilValue: false), round: scoreDataFunction.shotsOrRound(scoreData: scoreData, sorts: false), shots: scoreDataFunction.shotsOrRound(scoreData: scoreData, sorts: true))
+
+        do {
+            if #available(iOS 16.1, *) {
+                let scoreActivity = try Activity<ArcheryWidgetAttributes>.request(
+                    attributes: archeryWidgetAttributes,
+                    contentState: initialContentState,
+                    pushType: nil)
+                print("Requested a archery score Live Activity \(scoreActivity.id)")
+            }
+        } catch (let error) {
+            print("Error requesting archery score Live Activity \(error.localizedDescription)")
+        }
+    }
+
+    func updateActivity() {
+        Task {
+            // Date() changed to Date()...Date() - 16.1
+            let updatedArcheryStatus = ArcheryWidgetAttributes.ArcheryStatus(total: scoreDataFunction.TotalScore(scoreData: scoreData), average: scoreDataFunction.AverageScore(scoreData: scoreData, countNilValue: false), round: scoreDataFunction.shotsOrRound(scoreData: scoreData, sorts: false), shots: scoreDataFunction.shotsOrRound(scoreData: scoreData, sorts: true))
+            if #available(iOS 16.1, *) {
+                for activity in Activity<ArcheryWidgetAttributes>.activities{
+                    await activity.update(using: updatedArcheryStatus)
+                }
+            }
+        }
+    }
+
+    func stopActivity() {
+        Task {
+            if #available(iOS 16.1, *) {
+                for activity in Activity<ArcheryWidgetAttributes>.activities{
+                    await activity.end(dismissalPolicy: .immediate)
+                }
+            }
+        }
+    }
+
+    func showAllDeliveries() {
+        Task {
+            if #available(iOS 16.1, *) {
+                for activity in Activity<ArcheryWidgetAttributes>.activities {
+                    print("Archery score details: \(activity.id) -> \(activity.attributes)")
                 }
             }
         }

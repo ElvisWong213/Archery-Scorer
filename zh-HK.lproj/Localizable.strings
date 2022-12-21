@@ -81,3 +81,12 @@
 //ListOfRecord
 "Are you sure you want to delete this?" = "你確定要刪除?";
 "It cannot be undo" = "刪除後無法撤消";
+
+// Live Activity
+"Average" = "平均分";
+"Round" = "回合";
+"Total Score" = "總分";
+
+// Widget
+"Big Icon" = "超大圖示";
+"Show the Archery Marker with bigger icon." = "以較大的圖示顯示Archery Marker";

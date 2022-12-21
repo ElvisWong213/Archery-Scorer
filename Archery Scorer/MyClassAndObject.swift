@@ -124,6 +124,32 @@ class ScoreDataFunction {
         }
         return output
     }
+    
+    func shotsOrRound(scoreData: [[ScoreData]], sorts: Bool) -> Int {
+        let newData = FlatScoreData(scoreData: scoreData)
+        var counter = 0
+        var ans = 0
+        for i in newData {
+            if i != "" {
+                counter += 1
+            } else {
+                break
+            }
+        }
+        if sorts == true {
+            if counter == 36 {
+                ans = 6
+            } else {
+                ans = counter % 6
+            }
+        } else {
+            ans = counter / 6 + 1
+            if ans == 7 {
+                ans -= 1
+            }
+        }
+        return ans
+    }
 }
 
 class CalendarFunction {
