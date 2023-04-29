@@ -16,13 +16,23 @@ struct Archery_ScorerApp: App {
 //    let persistenceController = PersistenceController.shared
     @State private var dataController = DataController()
     @StateObject var appState = BaseViewModel()
+    @StateObject var purchaseManager = PurchaseManager()
 
     var body: some Scene {
         WindowGroup {
 //            RecordView(bowData: .constant([58, 150 ,10]), time: .constant(Date.now))
             ContentView()
+                .navigationViewStyle(StackNavigationViewStyle())
                 .environmentObject(appState)
+                .environmentObject(purchaseManager)
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .onOpenURL { url in
+                    if appState.checkDeepLink(url: url) {
+                        print("from deep link")
+                    } else {
+                        print("fall back deep link")
+                    }
+                }
         }
         .onChange(of: lifeCycle) { newLifeCyclePhase in
             if newLifeCyclePhase == .active {

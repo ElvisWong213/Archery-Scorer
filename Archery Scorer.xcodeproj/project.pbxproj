@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AA00F007294D52EA00049EC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE2694027E1C00600483891 /* Assets.xcassets */; };
-		AA08107528623BC7003B4EC9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA08107428623BC7003B4EC9 /* CloudKit.framework */; };
 		AA0D55F728CE22200091D330 /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0D55F628CE22200091D330 /* ReviewHandler.swift */; };
 		AA1CEF8B29D6F52900B488F6 /* ScoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF8A29D6F52900B488F6 /* ScoreData.swift */; };
 		AA1CEF8F29D6F56A00B488F6 /* ScoreDataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEF8E29D6F56A00B488F6 /* ScoreDataFunction.swift */; };
@@ -44,6 +43,10 @@
 		AAD0C0AA294CD83B0016F8C3 /* ArcheryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD0C0A9294CD83B0016F8C3 /* ArcheryWidget.swift */; };
 		AAD0C0AC294CD83F0016F8C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD0C0AB294CD83F0016F8C3 /* Assets.xcassets */; };
 		AAD0C0B0294CD83F0016F8C3 /* ArcheryWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AAD0C09F294CD83B0016F8C3 /* ArcheryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AADAB0D329FD610300F598C1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAB0D229FD610300F598C1 /* SettingView.swift */; };
+		AADAB0D729FD785D00F598C1 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAB0D629FD785D00F598C1 /* PurchaseManager.swift */; };
+		AADAB0DD29FD933F00F598C1 /* AdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADAB0DC29FD933F00F598C1 /* AdCoordinator.swift */; };
+		AADAB0E329FDCB9900F598C1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA08107428623BC7003B4EC9 /* CloudKit.framework */; };
 		AAE0A13A27E202700084B04B /* ListOfRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0A13927E202700084B04B /* ListOfRecord.swift */; };
 		AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAE0A14027E228CA0084B04B /* Localizable.strings */; };
 		AAE0A14327E232AE0084B04B /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE0A14227E232AE0084B04B /* AddView.swift */; };
@@ -139,6 +142,10 @@
 		AAD0C0A9294CD83B0016F8C3 /* ArcheryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcheryWidget.swift; sourceTree = "<group>"; };
 		AAD0C0AB294CD83F0016F8C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD0C0AD294CD83F0016F8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADAB0D229FD610300F598C1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		AADAB0D529FD6E0100F598C1 /* MainConfigutation.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = MainConfigutation.storekit; sourceTree = "<group>"; };
+		AADAB0D629FD785D00F598C1 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		AADAB0DC29FD933F00F598C1 /* AdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCoordinator.swift; sourceTree = "<group>"; };
 		AAE0A13927E202700084B04B /* ListOfRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRecord.swift; sourceTree = "<group>"; };
 		AAE0A13F27E228CA0084B04B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAE0A14127E228F30084B04B /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -181,7 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA08107528623BC7003B4EC9 /* CloudKit.framework in Frameworks */,
+				AADAB0E329FDCB9900F598C1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +266,28 @@
 			path = ArcheryWidget;
 			sourceTree = "<group>";
 		};
+		AADAB0D429FD6DD100F598C1 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AADAB0DB29FD915400F598C1 /* AD */,
+				AADAB0D529FD6E0100F598C1 /* MainConfigutation.storekit */,
+				AADAB0D629FD785D00F598C1 /* PurchaseManager.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AADAB0DB29FD915400F598C1 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				AADAB0DC29FD933F00F598C1 /* AdCoordinator.swift */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
 		AAE2693027E1C00500483891 = {
 			isa = PBXGroup;
 			children = (
+				AADAB0D429FD6DD100F598C1 /* Store */,
 				AA510E082875956100803926 /* InfoPlist.strings */,
 				AA510E022875948C00803926 /* Archery-Scorer-Info.plist */,
 				AA9855B927E8B1E400EC4A22 /* CoreData */,
@@ -317,6 +343,7 @@
 				AA5BC22D27E329D700C268F3 /* RecordView.swift */,
 				AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */,
 				AA732DA928A00389006B7D4C /* WelcomeView.swift */,
+				AADAB0D229FD610300F598C1 /* SettingView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -393,6 +420,8 @@
 				AAD0C0AF294CD83F0016F8C3 /* PBXTargetDependency */,
 			);
 			name = "Archery Scorer";
+			packageProductDependencies = (
+			);
 			productName = "Archery Scorer";
 			productReference = AAE2693927E1C00500483891 /* Archery Scorer.app */;
 			productType = "com.apple.product-type.application";
@@ -429,6 +458,9 @@
 				"zh-HK",
 			);
 			mainGroup = AAE2693027E1C00500483891;
+			packageReferences = (
+				AADAB0D829FD8E7F00F598C1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = AAE2693A27E1C00500483891 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -502,6 +534,7 @@
 				AA96D44E2879F0B9007BE443 /* ExportPopUp.swift in Sources */,
 				AAE0A14327E232AE0084B04B /* AddView.swift in Sources */,
 				AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */,
+				AADAB0D329FD610300F598C1 /* SettingView.swift in Sources */,
 				AAEACE6427E71CE500B9A0B3 /* ScoreBoard2.swift in Sources */,
 				AA1CEF9E29D6F63300B488F6 /* Screenshot.swift in Sources */,
 				AA2C24A1281E74510071AB2A /* ChartCombine.swift in Sources */,
@@ -516,7 +549,9 @@
 				AAE2695427E1C34600483891 /* BottomBar.swift in Sources */,
 				AA732DAA28A00389006B7D4C /* WelcomeView.swift in Sources */,
 				AAE2694927E1C00600483891 /* Archery_Scorer.xcdatamodeld in Sources */,
+				AADAB0D729FD785D00F598C1 /* PurchaseManager.swift in Sources */,
 				AAEACE6227E71A8F00B9A0B3 /* ScoreBoard.swift in Sources */,
+				AADAB0DD29FD933F00F598C1 /* AdCoordinator.swift in Sources */,
 				AAE2695127E1C1E800483891 /* HomeView.swift in Sources */,
 				AAC5DC68287A0B3E0022A559 /* ActivityView.swift in Sources */,
 				AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */,
@@ -798,7 +833,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -820,7 +855,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 1.10;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -842,7 +878,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -864,7 +900,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9;
+				MARKETING_VERSION = 1.10;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -917,6 +954,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AADAB0D829FD8E7F00F598C1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		AAE2694727E1C00600483891 /* Archery_Scorer.xcdatamodeld */ = {

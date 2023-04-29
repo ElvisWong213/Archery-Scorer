@@ -87,7 +87,7 @@ struct AddView: View {
                         .frame(width: 150)
                         .background(buttonColor)
                 }
-                .alert("Please input all the data!", isPresented: $showAlert, actions: {
+                .alert("Please valid data!", isPresented: $showAlert, actions: {
                     Button("OK") {
                     }
                 })
@@ -108,9 +108,12 @@ struct AddView: View {
     }
     
     func checkDataValid() -> Bool {
-        if distance != "" {
+        if distance == "" {
+            return false
+        }
+        if let _ = Double(distance) {
             return true
-        }else{
+        } else {
             return false
         }
     }

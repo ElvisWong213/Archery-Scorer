@@ -16,6 +16,7 @@ struct AppCalendar: View {
     let buttonColor = Color("ButtonColor")
     
     @EnvironmentObject var myDate: MyDate
+    @EnvironmentObject var appState: BaseViewModel
     @FetchRequest var games: FetchedResults<Game>
     @State var calendarFunction = CalendarFunction()
     
@@ -53,6 +54,13 @@ struct AppCalendar: View {
                                     .foregroundColor(buttonColor)
                             }
                             Spacer()
+                            Button {
+                                appState.baseView = .setting
+                            } label: {
+                                Image(systemName: "gearshape.fill")
+                                    .font(Font.system(.title2))
+                                    .foregroundColor(buttonColor)
+                            }
                         }
                         Text("\(String(myDate.day))/\(String(myDate.month))/\(String(myDate.year))")
                             .font(.title)
@@ -149,6 +157,7 @@ struct AppCalendar_Previews: PreviewProvider {
     static var previews: some View {
         AppCalendar(startDate: Date() as NSDate, endDate: Date() as NSDate)
             .environmentObject(MyDate())
+            .environmentObject(BaseViewModel())
 //            .environment(\.locale, .init(identifier: "zh-HK"))
     }
 }

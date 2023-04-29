@@ -17,7 +17,7 @@ struct HomeView: View {
             AppCalendar(startDate: myDate.FindStartDate(), endDate: myDate.FindEndDate())
 //                .frame(height: UIScreen.main.bounds.size.height * 0.35)
             ListOfRecord(startDate: myDate.FindStartDate(), endDate: myDate.FindEndDate())
-                .frame(height: UIScreen.main.bounds.size.height * 0.45)
+                .frame(height: UIScreen.main.bounds.size.height * 0.4)
             BottomBar()
                 .frame(height: UIScreen.main.bounds.size.height * 0.1)
         }

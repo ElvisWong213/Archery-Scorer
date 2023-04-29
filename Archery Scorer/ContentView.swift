@@ -51,10 +51,14 @@ struct ContentView: View {
                         StatisticsView()
                         .environmentObject(myDate)
                         .environmentObject(appState)
+                    case .setting:
+                        SettingView()
+                        .transition(AnyTransition.move(edge: .bottom))
+                        .environmentObject(appState)
                 }
             }
         }
-        .animation(.easeInOut(duration: 0.25), value: appState.baseView == .add || appState.baseView == .review)
+        .animation(.easeInOut(duration: 0.25), value: appState.baseView == .add || appState.baseView == .review || appState.baseView == .setting)
         .preferredColorScheme(.dark)
     }
 }
@@ -63,5 +67,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environment(\.managedObjectContext, DataController.preview.container.viewContext)
+            .environmentObject(BaseViewModel())
     }
 }
