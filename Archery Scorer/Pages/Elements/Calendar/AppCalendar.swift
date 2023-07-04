@@ -74,41 +74,7 @@ struct AppCalendar: View {
                             Spacer()
                         }
                     }
-                    ForEach(0..<dayArray.count, id: \.self) { weeks in
-                        HStack {
-                            ForEach(dayArray[weeks], id: \.self) { days in
-                                Spacer()
-                                Button {
-                                    myDate.day = days
-                                }label: {
-                                    if days != 0 {
-                                        ZStack {
-                                            if CheckCalendarInCoreData(day: days) {
-                                                Circle()
-                                                    .frame(width: buttonSize, height: buttonSize)
-                                                    .foregroundColor(backgroundColor2)
-                                            }
-                                            if days == todayDay && myDate.month == todayMonth && myDate.year == todayYear {
-                                                Circle()
-                                                    .frame(width: buttonSize, height: buttonSize)
-                                                    .foregroundColor(backgroundColor3)
-                                            }
-                                            if days == myDate.day {
-                                                Circle()
-                                                    .frame(width: buttonSize, height: buttonSize)
-                                                    .foregroundColor(buttonColor)
-                                            }
-                                            Text(String(days))
-                                        }
-                                    }else{
-                                        Text("")
-                                    }
-                                }
-                                .frame(width: buttonSize, height: buttonSize)
-                                Spacer()
-                            }
-                        }
-                    }
+                    MonthCalenadar(dayArray: $dayArray, buttonSize: .constant(buttonSize), todayYear: $todayYear, todayMonth: $todayMonth, todayDay: $todayDay, games: .constant(games))
                 }
                 .foregroundColor(textColor)
             }
@@ -138,18 +104,6 @@ struct AppCalendar: View {
                 dayArray = calendarFunction.DayInArray(year: myDate.year, month: myDate.month)
             }
         }))
-    }
-    
-    func CheckCalendarInCoreData(day: Int) -> Bool {
-        var output = false
-        for game in games {
-            let components = Calendar.current.dateComponents([.year, .month, .day], from: game.wrappedTime)
-            if components.day == day {
-                output = true
-                break
-            }
-        }
-        return output
     }
 }
 

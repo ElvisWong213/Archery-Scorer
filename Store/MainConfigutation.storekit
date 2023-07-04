@@ -1,0 +1,50 @@
+{
+  "identifier" : "EDCB18AC",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6448663626",
+      "localizations" : [
+        {
+          "description" : "Support developer",
+          "displayName" : "Buy me a burger",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "archery_marker_burger",
+      "referenceName" : "Burger",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "6448663540",
+      "localizations" : [
+        {
+          "description" : "Support developer",
+          "displayName" : "Buy me a coffee",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "archery_marker_coffee",
+      "referenceName" : "Coffee",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1615448672",
+    "_developerTeamID" : "447H88N27M",
+    "_lastSynchronizedDate" : 704475721.69827402
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

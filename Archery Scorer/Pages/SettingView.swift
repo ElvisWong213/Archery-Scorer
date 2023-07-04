@@ -18,8 +18,7 @@ struct SettingView: View {
     @EnvironmentObject private var purchaseManager: PurchaseManager
     @EnvironmentObject private var appState: BaseViewModel
     
-//    private let adViewControllerRepresentable = AdViewControllerRepresentable()
-//    private let adCoordinator = AdCoordinator()
+    private let adCoordinator = AdCoordinator()
 
     var body: some View {
         VStack {
@@ -37,18 +36,17 @@ struct SettingView: View {
             }
             Form {
                 Section(header: Text("Donate & Support❤️")) {
-//                    Button {
-//                        adCoordinator.loadAd()
-//                        sleep(1)
-//                        adCoordinator.showAd(from: adViewControllerRepresentable.viewController)
-//                    } label: {
-//                        HStack {
-//                            Text("Watch AD")
-//                            Spacer()
-//                            Text("Free")
-//                        }
-//                    }
-//                    .foregroundColor(buttonColor)
+                    Button {
+                        adCoordinator.loadAd()
+                        adCoordinator.showAd()
+                    } label: {
+                        HStack {
+                            Text("Watch AD")
+                            Spacer()
+                            Text("Free")
+                        }
+                    }
+                    .foregroundColor(buttonColor)
                     ForEach(purchaseManager.products) { product in
                         Button {
                             Task {
@@ -83,7 +81,6 @@ struct SettingView: View {
             .task {
                 Task {
                     do {
-                        
                         try await purchaseManager.loadProducts()
                     } catch {
                         print(error)
@@ -93,10 +90,6 @@ struct SettingView: View {
         }
         .preferredColorScheme(.dark)
         .foregroundColor(textColor)
-//        .background {
-//            adViewControllerRepresentable
-//                .frame(width: .zero, height: .zero)
-//        }
     }
 }
 

@@ -22,6 +22,7 @@
 		AA2C24A3281E9D520071AB2A /* FilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C24A2281E9D520071AB2A /* FilterBar.swift */; };
 		AA3C167028510BAB00ACAB96 /* Archery_ScorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C166F28510BAB00ACAB96 /* Archery_ScorerUITests.swift */; };
 		AA3C167228510BAB00ACAB96 /* Archery_ScorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C167128510BAB00ACAB96 /* Archery_ScorerUITestsLaunchTests.swift */; };
+		AA4025C529FEB20F00232CE9 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = AA4025C429FEB20F00232CE9 /* GoogleMobileAds */; };
 		AA510DF32874621600803926 /* UUIDToStringUUIDPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA510DF22874621600803926 /* UUIDToStringUUIDPolicy.swift */; };
 		AA510E062875956100803926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA510E082875956100803926 /* InfoPlist.strings */; };
 		AA510E132875F32500803926 /* MappingModel.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = AA510E122875F32500803926 /* MappingModel.xcmappingmodel */; };
@@ -36,6 +37,8 @@
 		AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */; };
 		AA9855DB27E8EB0300EC4A22 /* Game+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */; };
 		AA9855DD27E8F12E00EC4A22 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9855DC27E8F12E00EC4A22 /* DataController.swift */; };
+		AABFDC892A00F813003FD237 /* WeekCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFDC882A00F813003FD237 /* WeekCalendar.swift */; };
+		AABFDC8C2A01139B003FD237 /* MonthCalenadar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFDC8B2A01139B003FD237 /* MonthCalenadar.swift */; };
 		AAC5DC68287A0B3E0022A559 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC5DC67287A0B3E0022A559 /* ActivityView.swift */; };
 		AAD0C0A1294CD83B0016F8C3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD0C0A0294CD83B0016F8C3 /* WidgetKit.framework */; };
 		AAD0C0A3294CD83B0016F8C3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD0C0A2294CD83B0016F8C3 /* SwiftUI.framework */; };
@@ -66,6 +69,7 @@
 		AAEACE6627E77E7200B9A0B3 /* ReviewRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */; };
 		AAEEC8BE27EC8E070062DDBB /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEEC8BD27EC8E070062DDBB /* BarChart.swift */; };
 		AAEEC8C027EDCA410062DDBB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEEC8BF27EDCA410062DDBB /* LineChart.swift */; };
+		AAF71AE32A54DA2100CD2C34 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAF71AE22A54DA2100CD2C34 /* Key.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +137,8 @@
 		AA9855D627E8EB0300EC4A22 /* Game+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AA9855D727E8EB0300EC4A22 /* Game+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AA9855DC27E8F12E00EC4A22 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		AABFDC882A00F813003FD237 /* WeekCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendar.swift; sourceTree = "<group>"; };
+		AABFDC8B2A01139B003FD237 /* MonthCalenadar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalenadar.swift; sourceTree = "<group>"; };
 		AAC5DC67287A0B3E0022A559 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		AAD0C09F294CD83B0016F8C3 /* ArcheryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ArcheryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD0C0A0294CD83B0016F8C3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -164,6 +170,7 @@
 		AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRecordView.swift; sourceTree = "<group>"; };
 		AAEEC8BD27EC8E070062DDBB /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		AAEEC8BF27EDCA410062DDBB /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		AAF71AE22A54DA2100CD2C34 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
 		AAF87C7D2847E13900D24BC9 /* Archery Scorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Archery Scorer.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4025C529FEB20F00232CE9 /* GoogleMobileAds in Frameworks */,
 				AADAB0E329FDCB9900F598C1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +262,16 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		AABFDC8A2A0112B0003FD237 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2695527E1C97000483891 /* AppCalendar.swift */,
+				AABFDC882A00F813003FD237 /* WeekCalendar.swift */,
+				AABFDC8B2A01139B003FD237 /* MonthCalenadar.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		AAD0C0A4294CD83B0016F8C3 /* ArcheryWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				AADAB0DC29FD933F00F598C1 /* AdCoordinator.swift */,
+				AAF71AE22A54DA2100CD2C34 /* Key.plist */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -351,8 +370,8 @@
 		AAE2695227E1C32300483891 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				AABFDC8A2A0112B0003FD237 /* Calendar */,
 				AAE2695327E1C34600483891 /* BottomBar.swift */,
-				AAE2695527E1C97000483891 /* AppCalendar.swift */,
 				AAE0A13927E202700084B04B /* ListOfRecord.swift */,
 				AA5BC22F27E3A6B400C268F3 /* TargetBoard.swift */,
 				AAEACE6127E71A8F00B9A0B3 /* ScoreBoard.swift */,
@@ -421,6 +440,7 @@
 			);
 			name = "Archery Scorer";
 			packageProductDependencies = (
+				AA4025C429FEB20F00232CE9 /* GoogleMobileAds */,
 			);
 			productName = "Archery Scorer";
 			productReference = AAE2693927E1C00500483891 /* Archery Scorer.app */;
@@ -495,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE2694427E1C00600483891 /* Preview Assets.xcassets in Resources */,
+				AAF71AE32A54DA2100CD2C34 /* Key.plist in Resources */,
 				AA510E062875956100803926 /* InfoPlist.strings in Resources */,
 				AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */,
 				AAE2694127E1C00600483891 /* Assets.xcassets in Resources */,
@@ -536,6 +557,7 @@
 				AA687B0B27F463AA00865805 /* StatisticsView.swift in Sources */,
 				AADAB0D329FD610300F598C1 /* SettingView.swift in Sources */,
 				AAEACE6427E71CE500B9A0B3 /* ScoreBoard2.swift in Sources */,
+				AABFDC892A00F813003FD237 /* WeekCalendar.swift in Sources */,
 				AA1CEF9E29D6F63300B488F6 /* Screenshot.swift in Sources */,
 				AA2C24A1281E74510071AB2A /* ChartCombine.swift in Sources */,
 				AA9855D827E8EB0300EC4A22 /* Round+CoreDataClass.swift in Sources */,
@@ -555,6 +577,7 @@
 				AAE2695127E1C1E800483891 /* HomeView.swift in Sources */,
 				AAC5DC68287A0B3E0022A559 /* ActivityView.swift in Sources */,
 				AA9855DA27E8EB0300EC4A22 /* Game+CoreDataClass.swift in Sources */,
+				AABFDC8C2A01139B003FD237 /* MonthCalenadar.swift in Sources */,
 				AA9855DD27E8F12E00EC4A22 /* DataController.swift in Sources */,
 				AA9855D327E8D1E500EC4A22 /* Persistence.swift in Sources */,
 				AAE0A13A27E202700084B04B /* ListOfRecord.swift in Sources */,
@@ -833,7 +856,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -855,7 +878,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.10.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -878,7 +901,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Archery Scorer/Archery Scorer.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Archery Scorer/Preview Content\"";
 				DEVELOPMENT_TEAM = 447H88N27M;
 				ENABLE_PREVIEWS = YES;
@@ -900,7 +923,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.10;
+				MARKETING_VERSION = 1.10.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "elvis.Archery-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -965,6 +988,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA4025C429FEB20F00232CE9 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AADAB0D829FD8E7F00F598C1 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AAE2694727E1C00600483891 /* Archery_Scorer.xcdatamodeld */ = {

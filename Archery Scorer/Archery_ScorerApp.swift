@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
+import AppTrackingTransparency
 
 var shortcutItemToHandle: UIApplicationShortcutItem?
 
@@ -17,6 +19,10 @@ struct Archery_ScorerApp: App {
     @State private var dataController = DataController()
     @StateObject var appState = BaseViewModel()
     @StateObject var purchaseManager = PurchaseManager()
+    
+    init() {
+        ask()
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -48,6 +54,25 @@ struct Archery_ScorerApp: App {
                 shortcutItemToHandle = nil
             }
         }
+    }
+    
+    func ask() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .notDetermined:
+                    print("Not Determined")
+                case .restricted:
+                    print("Restricted")
+                case .denied:
+                    print("Denied")
+                case .authorized:
+                    GADMobileAds.sharedInstance().start(completionHandler: nil)
+                @unknown default:
+                    print("error")
+                }
+            }
+        })
     }
 }
 
