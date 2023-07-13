@@ -1,7 +1,7 @@
 # Archery Scorer App
 
 ## Description
-Archery Scorer is a user-friendly mobile application designed for archery enthusiasts to keep track of their scores, analyze their progress, and share their achievements on social media platforms. This README file provides an overview of the app's features and instructions for usage.
+Archery Scorer is a user-friendly mobile application designed for archery enthusiasts to keep track of their scores, analyze their progress, and share their achievements on social media platforms.
 
 ## Features
 1. Sync Data on iPad and iPhone: The app allows you to seamlessly synchronize your data across multiple devices, ensuring that your scores are always up-to-date regardless of the device you are using.
