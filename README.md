@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="images/icon.png" alt="App icon" height="128">
+    <img src="images/Icon.png" alt="App icon" height="128">
     <h1 align="center">Archery Scorer</h1>
 </p>
 
