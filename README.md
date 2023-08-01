@@ -16,10 +16,12 @@ Archery Scorer is a user-friendly mobile application designed for archery enthus
 4. Analysis Chart: Gain valuable insights into your performance with the app's analysis chart. Visualize your scores and identify patterns or areas for improvement. This feature helps you make data-driven decisions to enhance your archery skills.
 
 ## Screenshot
-<img src="images/Connect_iPhone_6.5_1.png" width="200"/>
-<img src="images/Connect_iPhone_6.5_2.png" width="200"/>
-<img src="images/Connect_iPhone_6.5_3.png" width="200"/>
-<img src="images/Connect_iPhone_6.5_4.png" width="200"/>
-<img src="images/Connect_iPhone_6.5_5.png" width="200"/>
-<img src="images/Connect_iPhone_6.5_6.png" width="200"/>
-<img src="images/Connect_iPhone_6.5_7.png" width="200"/>
+<p>
+    <img src="images/Connect_iPhone_6.5_1.png" width="200"/>
+    <img src="images/Connect_iPhone_6.5_2.png" width="200"/>
+    <img src="images/Connect_iPhone_6.5_3.png" width="200"/>
+    <img src="images/Connect_iPhone_6.5_4.png" width="200"/>
+    <img src="images/Connect_iPhone_6.5_5.png" width="200"/>
+    <img src="images/Connect_iPhone_6.5_6.png" width="200"/>
+    <img src="images/Connect_iPhone_6.5_7.png" width="200"/>
+</p>
