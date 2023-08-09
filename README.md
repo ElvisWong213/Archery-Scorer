@@ -6,6 +6,14 @@
 ## About this project
 Archery Scorer is a user-friendly mobile application designed for archery enthusiasts to keep track of their scores, analyze their progress, and share their achievements on social media platforms.
 
+## Used Technology
+- SwiftUI 📱
+- CoreData 💾
+- CloudKit ☁️
+- WidgetKit 🎛️
+- Google AdMob 📣
+- StoreKit 🧾
+
 ## Features
 1. Sync Data on iPad and iPhone: The app allows you to seamlessly synchronize your data across multiple devices, ensuring that your scores are always up-to-date regardless of the device you are using.
 
