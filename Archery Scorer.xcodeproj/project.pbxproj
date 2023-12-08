@@ -69,7 +69,6 @@
 		AAEACE6627E77E7200B9A0B3 /* ReviewRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */; };
 		AAEEC8BE27EC8E070062DDBB /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEEC8BD27EC8E070062DDBB /* BarChart.swift */; };
 		AAEEC8C027EDCA410062DDBB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEEC8BF27EDCA410062DDBB /* LineChart.swift */; };
-		AAF71AE32A54DA2100CD2C34 /* Key.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAF71AE22A54DA2100CD2C34 /* Key.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,7 +169,6 @@
 		AAEACE6527E77E7200B9A0B3 /* ReviewRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRecordView.swift; sourceTree = "<group>"; };
 		AAEEC8BD27EC8E070062DDBB /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		AAEEC8BF27EDCA410062DDBB /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
-		AAF71AE22A54DA2100CD2C34 /* Key.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Key.plist; sourceTree = "<group>"; };
 		AAF87C7D2847E13900D24BC9 /* Archery Scorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Archery Scorer.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				AADAB0DC29FD933F00F598C1 /* AdCoordinator.swift */,
-				AAF71AE22A54DA2100CD2C34 /* Key.plist */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -515,7 +512,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE2694427E1C00600483891 /* Preview Assets.xcassets in Resources */,
-				AAF71AE32A54DA2100CD2C34 /* Key.plist in Resources */,
 				AA510E062875956100803926 /* InfoPlist.strings in Resources */,
 				AAE0A13E27E228CA0084B04B /* Localizable.strings in Resources */,
 				AAE2694127E1C00600483891 /* Assets.xcassets in Resources */,
