@@ -3,6 +3,8 @@
     <h1 align="center">Archery Scorer</h1>
 </p>
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ElvisWong)
+
 ## About this project
 Archery Scorer is a user-friendly mobile application designed for archery enthusiasts to keep track of their scores, analyse their progress, and share their achievements on social media platforms.
 
