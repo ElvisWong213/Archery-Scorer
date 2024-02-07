@@ -35,7 +35,7 @@ struct SettingView: View {
                     .font(.title).bold()
             }
             Form {
-                Section(header: Text("Donate & Support❤️")) {
+                Section(header: Text("Donate & Support❤️").foregroundStyle(textColor)) {
                     Button {
                         adCoordinator.loadAd()
                         adCoordinator.showAd()
@@ -46,7 +46,6 @@ struct SettingView: View {
                             Text("Free")
                         }
                     }
-                    .foregroundColor(buttonColor)
                     ForEach(purchaseManager.products) { product in
                         Button {
                             Task {
@@ -69,15 +68,14 @@ struct SettingView: View {
                             Alert(title: Text("Thank for your support❤️"))
                         }
                     }
-                    .foregroundColor(buttonColor)
                 }
-                Section(header: Text("About Me")) {
-                    Link("Follow my Instagram", destination: URL(string: "https://instagram.com/elvis_coding")!)
-                        .foregroundColor(buttonColor)
+                Section(header: Text("About Me").foregroundStyle(textColor)) {
+                    Link("Follow my Instagram", destination: URL(string: "https://www.instagram.com/elvis__wong_")!)
+                    Link("Follow my Twitter", destination: URL(string: "https://twitter.com/ElvisWong93553")!)
                     Link("Report bug / Feature request", destination: URL(string: "mailto:stevecode2021@gmail.com")!)
-                        .foregroundColor(buttonColor)
                 }
             }
+            .foregroundColor(buttonColor)
             .task {
                 Task {
                     do {
