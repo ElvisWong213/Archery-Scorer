@@ -4,9 +4,13 @@
 </p>
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ElvisWong)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S1U3FOF)
 
 ## About this project
 Archery Scorer is a user-friendly mobile application designed for archery enthusiasts to keep track of their scores, analyse their progress, and share their achievements on social media platforms.
+
+# Download on App Store
+[![Download_on_the_App_Store_Badge](https://github.com/ElvisWong213/Archery-Scorer/assets/40566101/2e448cc8-444e-490d-843b-c0d614bd856e)](https://apps.apple.com/us/app/archery-marker/id1615448672)
 
 ## Framework Used
 - SwiftUI 📱
